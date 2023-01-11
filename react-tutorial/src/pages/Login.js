@@ -4,6 +4,12 @@ import axios from 'axios';
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
 
+import { Link } from 'react-router-dom';
+
+
+
+
+
 class Login extends React.Component{
 
     constructor(props){
@@ -13,8 +19,8 @@ class Login extends React.Component{
             email: '',
             password: ''
         }
-
-    
+        
+        
     }
 
     changeHandler = (e) => {
@@ -29,21 +35,21 @@ class Login extends React.Component{
             console.log(response)
         })
         .catch(error => {
-            console.log(error)
-        })
+            console.log(error) 
+        })   
+        
     }
-
+        
     render() {
-
-        const { email, password } = this.state
 
         return ( 
         <div>
                 
         <div class="w3-top">
             <div class="w3-bar w3-theme1" id="myNavbar">
-            <a href="/" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</a>
-            <a href="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</a>
+            
+            <Link to="/" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</Link>
+            <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
             </div>
         </div>
 
@@ -71,18 +77,18 @@ class Login extends React.Component{
             <form onSubmit={this.submitHandler}> 
 
                     <div class="txt_field">
-                    <input type="text" id="email" name="email" value={email} onChange = {this.changeHandler} required/>
+                    <input type="text" id="email" name="email" value={this.state.email} onChange = {this.changeHandler} required/>
                     <span></span>
                     <label>Enter Email</label>
                     </div>
 
                     <div class="txt_field">
-                    <input type="password" id="password" name="password" value={password} onChange = {this.changeHandler} required/>
+                    <input type="password" id="password" name="password" value={this.state.password} onChange = {this.changeHandler} required/>
                     <span></span>
                     <label>Enter Password</label>
                     </div>
 
-                    <div class="pass"><a href="/frgtpass">Forgot Password?</a></div>
+                    <div class="pass"><Link to="/frgtpass">Forgot Password?</Link></div>
 
                     <input type="submit" value="Login"></input>
 
@@ -95,11 +101,11 @@ class Login extends React.Component{
                     <br/>
                     <br/>
 
-                    <a href="/register" class="w3-button w3-orange">+ Register now</a>
+                    <Link to="/register" class="w3-button w3-orange">+ Register now</Link>
 
                     <br/>
 
-                    <a href="/country" class="w3-button w3-green w3-margin left">Continue without Login !</a>
+                    <Link to="/country" class="w3-button w3-green w3-margin left">Continue without Login !</Link>
 
                     <br/>
 
@@ -111,8 +117,11 @@ class Login extends React.Component{
                     <div class="footer">
                         <p>&copy; 2019 | 2022 GreenMedia | Erasmus+ FinalBuild </p>
                     </div>
-    </div> );
-    }
+    </div> 
+    
+    
+        );
+    } 
 }
 
 export default Login;

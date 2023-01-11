@@ -12,11 +12,15 @@ import LoginErr from './pages/LoginErr';
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
+
 import './App.css';
 import './w3.css';
 
 function App() {
+  
+
   return (
+
     <div>
       <Router>
         <Routes>
@@ -36,5 +40,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

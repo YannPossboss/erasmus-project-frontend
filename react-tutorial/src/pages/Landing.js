@@ -3,6 +3,8 @@ import React from "react";
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
 
+import { Link } from 'react-router-dom';
+
 class Landing extends React.Component {
     render () {
         return (
@@ -10,11 +12,11 @@ class Landing extends React.Component {
                 
                 <div class="w3-top">
                     <div class="w3-bar w3-theme1" id="myNavbar">
-                    <a href="/impress" class="w3-bar-item w3-button w3-text-white w3-hide-small">Legal notice</a>
+                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-hide-small">Legal notice</Link>
                     </div>
                 
                     <div id="navDemo" class="w3-bar-block w3-theme1 w3-hide w3-hide-large w3-hide-medium">
-                    <a href="/impress" class="w3-bar-item w3-button">Legal notice</a>
+                    <Link to="/impress" class="w3-bar-item w3-button">Legal notice</Link>
                     </div>
                 </div>
 
@@ -23,7 +25,7 @@ class Landing extends React.Component {
                     <div class="w3-hide-large">
 
                     <div class="w3-bar w3-theme1" id="myNavbar">
-                    <a href="/impress" class="w3-bar-item w3-button w3-text-white w3-left w3-dark-gray">Legal notice</a>
+                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-left w3-dark-gray">Legal notice</Link>
                     </div>
 
                     </div>
@@ -44,19 +46,19 @@ class Landing extends React.Component {
                             
                             <br/>
 
-                            <a href="/login"><input type="submit" value="Login to your Account"></input></a>
+                            <Link to="/login"><input type="submit" value="Login to your Account"></input></Link>
                             
                             <br/>
                             <br/>
 
                             <div class="style2">
-                            <a href="/register"><input type="submit" value="Register new Account"/></a>
+                            <Link to="/register"><input type="submit" value="Register new Account"/></Link>
                             </div>
 
                             <br/>
 
                             <div class="style3 w3-center">
-                            <a href="/country"><input type="submit" value="Continue without Login"/></a>   
+                            <Link to="/country"><input type="submit" value="Continue without Login"/></Link>   
                             </div>
 
                             <br/>
@@ -82,7 +84,7 @@ class Landing extends React.Component {
                     <br/>
                     <br/>
 
-                    <a href="/login"><input type="submit" value="Login to your Account"></input></a>
+                    <Link to="/login"><input type="submit" value="Login to your Account"></input></Link>
 
                     <br/>
                     <br/>
@@ -90,7 +92,7 @@ class Landing extends React.Component {
 
                     <div class="style2">
 
-                    <a href="/register"><input type="submit" value="Register new Account"/></a>
+                    <Link to="/register"><input type="submit" value="Register new Account"/></Link>
                     
                     </div>
 
@@ -102,7 +104,7 @@ class Landing extends React.Component {
 
                     <div class="style4">
 
-                    <a href="/country"><input type="submit" value="Continue without Login"/></a>   
+                    <Link to="/country"><input type="submit" value="Continue without Login"/></Link>   
                     
                     </div> 
 

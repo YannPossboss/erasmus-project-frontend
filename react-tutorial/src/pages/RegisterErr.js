@@ -112,7 +112,7 @@ class RegisterErr extends React.Component{
 
                 <div class="footer">
 
-                    <p>&copy; 2019 | 2022 GreenMedia | Erasmus+ Demo </p>
+                    <p>&copy; 2019 | 2022 HEMS | Erasmus+ Demo </p>
 
                 </div>
 

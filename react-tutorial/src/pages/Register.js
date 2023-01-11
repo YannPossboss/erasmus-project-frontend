@@ -63,7 +63,7 @@ class Register extends React.Component{
 
                 <div class="w3-hide-small">
 
-                <h1>[WebseiteName] <br/>Registration</h1>
+                <h1>Registration</h1>
                 </div>
 
                     <form onSubmit={this.submitHandler}>
@@ -102,7 +102,7 @@ class Register extends React.Component{
 
                 <div class="footer">
 
-                    <p>&copy; 2019 | 2022 GreenMedia | Erasmus+ Demo </p>
+                    <p>&copy; 2019 | 2022 HEMS | Erasmus+ Demo </p>
 
                 </div>
 

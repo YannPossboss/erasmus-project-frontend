@@ -86,7 +86,7 @@ class Country extends React.Component {
 
                     <br/>
                     <a href="/editp" class="w3-button w3-light-blue">View your Profile</a>
-                    <p>&copy; 2019 | 2022 GreenMedia | Erasmus+ Demo </p>
+                    <p>&copy; 2019 | 2022 HEMS | Erasmus+ Demo </p>
 
                     </div>
 

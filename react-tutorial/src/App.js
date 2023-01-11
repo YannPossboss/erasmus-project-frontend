@@ -30,7 +30,7 @@ function App() {
           <Route path = "/frgtpass" element={<FrgtPass/>}/>
           <Route path = "/country" element={<Country/>}/>
           <Route path = "/login" element={<Login/>}/>
-          <Route path = "loginerr" element={<LoginErr/>}/>
+          <Route path = "/loginerr" element={<LoginErr/>}/>
           <Route path = "/editp" element={<ProfileEdit/>}/>
           <Route path = "/create" element={<AdminPost/>}/>
           <Route path = "/recipe" element={<RecipeTempl/>}/>

@@ -89,7 +89,7 @@ class FrgtPass extends React.Component {
                 </div>
 
                             <div class="footer">
-                                <p>&copy; 2019 | 2022 GreenMedia | Erasmus+ FinalBuild </p>
+                                <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
                             </div>
 
             </div>

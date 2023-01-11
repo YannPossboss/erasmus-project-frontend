@@ -23,7 +23,7 @@ class Register extends React.Component{
     submitHandler = e =>{
         e.preventDefault()
         console.log(this.state)
-        axios.post('http://192.168.137.1:5000/api/register', this.state)
+        axios.post('http://localhost:5000/api/register', this.state)
         .then(response =>{
             console.log(response)
         })

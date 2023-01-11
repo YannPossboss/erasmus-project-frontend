@@ -24,9 +24,6 @@ const db = new sqlite3.Database("database/mock.db", sqlite3.OPEN_READWRITE, (err
 //db.run("CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT,email STRING,password STRING,country STRING,admin BOOLEAN)");
 
 
-//Load reactbuild
-app.use(express.static(path.join(__dirname, "build")));
-
 //some middleware
 
 app.use(express.urlencoded({ extended: false}))
@@ -94,11 +91,6 @@ app.post("/api/login", (req,res) => {
 
 //END OF API
 
-app.get("*", (req,res) => {
-    res.sendFile(path.join(__dirname, "build/index.html"));
-})
-console.log("reactbuild index was loaded");
-
-app.listen(3000), () => {
+app.listen(5000), () => {
     console.log("Server listen");
 };

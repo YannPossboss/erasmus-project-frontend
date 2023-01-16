@@ -4,6 +4,8 @@ import axios from 'axios';
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
 
+import { Link } from 'react-router-dom';
+
 class AdminPost extends React.Component {
 
     constructor(){
@@ -47,8 +49,8 @@ class AdminPost extends React.Component {
 
                 <div class="w3-top">
                     <div class="w3-bar w3-theme1" id="myNavbar">
-                    <a href="/" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</a>
-                    <a href="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</a>
+                    <Link to="/" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</Link>
+                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
                     <div class="logoimg">
                         <img src={erasmus} alt="Avatar" class="avatar"/>
                         <img src={hems} alt="Avatar2" class="avatar"/>

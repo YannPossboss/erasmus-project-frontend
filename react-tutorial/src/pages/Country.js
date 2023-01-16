@@ -14,6 +14,8 @@ import flags4 from "./flags/flag_rs.jpg"
 import flags5 from "./flags/flag_ts.jpg"
 import flags6 from "./flags/flag_eus.jpg"
 
+import { Link } from 'react-router-dom';
+
 
 class Country extends React.Component {
     render () {
@@ -22,8 +24,8 @@ class Country extends React.Component {
 
                 <div class="w3-top">
                     <div class="w3-bar w3-theme1" id="myNavbar">
-                    <a href="/" class="w3-bar-item w3-text-white w3-button w3-red">Logout</a>
-                    <a href="/impress" class="w3-bar-item w3-button w3-text-white w3-right">Legal notice</a>
+                    <Link to="/" class="w3-bar-item w3-text-white w3-button w3-red">Logout</Link>
+                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right">Legal notice</Link>
                     </div>
                 </div>
 
@@ -44,12 +46,12 @@ class Country extends React.Component {
                     <div id="projects" class="w3-hide-medium w3-hide-small">
 
                         <ul>
-                        <li><a href="/"><img src={flag1} alt=""/></a></li>
-                        <li><a href="/"><img src={flag2} alt=""/></a></li>
-                        <li><a href="/"><img src={flag3} alt=""/></a></li>
-                        <li><a href="/"><img src={flag4} alt=""/></a></li>
-                        <li><a href="/"><img src={flag5} alt=""/></a></li>
-                        <li><a href="/"><img src={flag6} alt=""/></a></li>
+                        <li><Link to="/"><img src={flag1} alt=""/></Link></li>
+                        <li><Link to="/"><img src={flag2} alt=""/></Link></li>
+                        <li><Link to="/"><img src={flag3} alt=""/></Link></li>
+                        <li><Link to="/"><img src={flag4} alt=""/></Link></li>
+                        <li><Link to="/"><img src={flag5} alt=""/></Link></li>
+                        <li><Link to="/"><img src={flag6} alt=""/></Link></li>
                         </ul>
 
                     </div>
@@ -58,17 +60,17 @@ class Country extends React.Component {
 
                         <ul>
                         <br/>
-                        <li><a href="/"><img src={flags1} alt=""/></a></li>
+                        <li><Link to="/"><img src={flags1} alt=""/></Link></li>
                         <br/>
-                        <li><a href="/"><img src={flags2} alt=""/></a></li>
+                        <li><Link to="/"><img src={flags2} alt=""/></Link></li>
                         <br/>
-                        <li><a href="/"><img src={flags3} alt=""/></a></li>
+                        <li><Link to="/"><img src={flags3} alt=""/></Link></li>
                         <br/>
-                        <li><a href="/"><img src={flags6} alt=""/></a></li>
+                        <li><Link to="/"><img src={flags6} alt=""/></Link></li>
                         <br/>
-                        <li><a href="/"><img src={flags4} alt=""/></a></li>
+                        <li><Link to="/"><img src={flags4} alt=""/></Link></li>
                         <br/>
-                        <li><a href="/"><img src={flags5} alt=""/></a></li>
+                        <li><Link to="/"><img src={flags5} alt=""/></Link></li>
                         <br/>
                         <br/>
                         <br/>
@@ -85,7 +87,7 @@ class Country extends React.Component {
                     <div class="footer">
 
                     <br/>
-                    <a href="/editp" class="w3-button w3-light-blue">View your Profile</a>
+                    <Link to="/editp" class="w3-button w3-light-blue">View your Profile</Link>
                     <p>&copy; 2019 | 2022 HEMS | Erasmus+ Demo </p>
 
                     </div>

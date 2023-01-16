@@ -2,6 +2,8 @@ import React from "react";
 
 import person from "./logo/person.png"
 
+import { Link } from 'react-router-dom';
+
 class ProfileEdit extends React.Component {
     render () {
         return (
@@ -9,8 +11,8 @@ class ProfileEdit extends React.Component {
                 
                 <div class="w3-top">
                     <div class="w3-bar w3-theme1" id="myNavbar">
-                    <a href="/country" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</a>
-                    <a href="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</a>
+                    <Link to="/country" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</Link>
+                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
                     </div>
                 </div>
 
@@ -20,7 +22,7 @@ class ProfileEdit extends React.Component {
                     <img src={person} alt="peron"/>
                     <br/>
                     <br/>
-                    <a href="/" class="w3-button w3-light-blue">Upload profile picture</a>
+                    <Link to="/" class="w3-button w3-light-blue">Upload profile picture</Link>
                 </div>
 
                 <div class="row">
@@ -75,7 +77,7 @@ class ProfileEdit extends React.Component {
                                 <br/>
                                 <br/>
                                 <br/>
-                                <a href="frgt_pass.html" class="w3-button w3-light-blue"><i class="fa fa-gears w3-margin-right"></i>Change your Password</a>
+                                <Link to="frgt_pass.html" class="w3-button w3-light-blue"><i class="fa fa-gears w3-margin-right"></i>Change your Password</Link>
                                 <br/>
                                 <br/>
                                 <br/>

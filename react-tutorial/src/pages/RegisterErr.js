@@ -4,6 +4,8 @@ import axios from 'axios';
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
 
+import { Link } from 'react-router-dom';
+
 class RegisterErr extends React.Component{
 
     constructor(props){
@@ -41,8 +43,8 @@ class RegisterErr extends React.Component{
 
                 <div class="w3-top">
                     <div class="w3-bar w3-theme1" id="myNavbar">
-                    <a href="/login" class="w3-bar-item w3-text-white w3-button w3-green">Go to Login</a>
-                    <a href="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</a>
+                    <Link to="/login" class="w3-bar-item w3-text-white w3-button w3-green">Go to Login</Link>
+                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
                     </div>
                 </div>
 

@@ -53,6 +53,7 @@ class Login extends React.Component{
             </div>
         </div>
 
+
         <div class="imgcontainer w3-hide-small">
             <img src={erasmus} alt="Avatar" class="avatar"/>
             <img src={hems} alt="Avatar2" class="avatar"/>

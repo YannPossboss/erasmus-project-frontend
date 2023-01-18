@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
+import Invalidtxt from "./pageComponent/Invalidtxt";
 
 import { Link } from 'react-router-dom';
 
@@ -62,9 +63,7 @@ class LoginErr extends React.Component{
 
             <h1>Login</h1>
 
-                    <div class="notification">
-                        <div><h3>Password or Username invalid !</h3></div>
-                    </div>
+            <Invalidtxt></Invalidtxt>
 
         </div>
 
@@ -72,9 +71,7 @@ class LoginErr extends React.Component{
 
             <h1>Login</h1>
 
-                    <div class="notification">
-                        <div><h3>Password or Username invalid !</h3></div>
-                    </div>
+            <Invalidtxt></Invalidtxt>
 
         </div>
 

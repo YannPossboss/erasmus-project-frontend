@@ -11,7 +11,6 @@ import RegisterErr from './pages/RegisterErr';
 import LoginErr from './pages/LoginErr'; 
 import LoginErrTest from './pages/LoginErrTest';
 
-import Invalidtxt from "./pages/pageComponent/Invalidtxt";
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
@@ -39,7 +38,6 @@ function App() {
           <Route path = "/create" element={<AdminPost/>}/>
           <Route path = "/recipe" element={<RecipeTempl/>}/>
           <Route path = "/regierr" element={<RegisterErr/>}/>
-          <Route path = "/inv" element={<Invalidtxt/>}/>
         </Routes>
       </Router>
     </div>

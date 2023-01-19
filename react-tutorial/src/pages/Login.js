@@ -1,92 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
 
-import { Link } from 'react-router-dom';
+import {useNavigate} from "react-router-dom";
+
+import {Link} from "react-router-dom";
 
 
 
+function Login(props){
+    const navigate = useNavigate()
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
 
-class Login extends React.Component{
 
-    constructor(props){
-        super(props)
+    function changeHandlerEmail(event){
+        setEmail(event.target.value);
+    }
 
-        this.state =  {
-            email: '',
-            password: ''
+    function changeHandlerPassword(event){
+        setPassword(event.target.value);
+    }
+
+    function submitHandler(event){
+        event.preventDefault()
+        let data = {
+            email: email,
+            password: password
         }
-        
-        
-    }
-
-    changeHandler = (e) => {
-        this.setState({ [e.target.name]: e.target.value })
-    }
-
-    submitHandler = e =>{
-        e.preventDefault()
-        console.log(this.state)
-        axios.post('http://localhost:5000/api/login', this.state)
+        axios.post('http://localhost:5000/api/login', data)
         .then(response =>{
             console.log(response)
         })
         .catch(error => {
             console.log(error) 
-        })   
-        
+        })
+        navigate("/create");
     }
-        
-    render() {
 
-        return ( 
+
+    
+    return(
         <div>
-                
-        <div class="w3-top">
-            <div class="w3-bar w3-theme1" id="myNavbar">
+
+            <div class="w3-top">
+                <div class="w3-bar w3-theme1" id="myNavbar">
             
-            <Link to="/" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</Link>
-            <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
+                <Link to="/" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</Link>
+                <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
+                </div>
             </div>
-        </div>
 
+            <div class="imgcontainer w3-hide-small">
+                <img src={erasmus} alt="Avatar" class="avatar"/>
+                <img src={hems} alt="Avatar2" class="avatar"/>
+            </div>
 
-        <div class="imgcontainer w3-hide-small">
-            <img src={erasmus} alt="Avatar" class="avatar"/>
-            <img src={hems} alt="Avatar2" class="avatar"/>
-        </div>
+            <div class="center">
 
-        <div class="center">
+            <div class=" w3-center w3-hide-large w3-margin-top">
+                <img src={erasmus} alt="Avatar" class="avatar"/>
+                <img src={hems} alt="Avatar2" class="avatar"/>
 
-        <div class=" w3-center w3-hide-large w3-margin-top">
-            <img src={erasmus} alt="Avatar" class="avatar"/>
-            <img src={hems} alt="Avatar2" class="avatar"/>
+                <h1>Login</h1>
+            </div>
 
-            <h1>Login</h1>
-        </div>
+            <div class="w3-hide-small">
 
-        <div class="w3-hide-small">
+                <h1>Login</h1>
+            </div>
 
-            <h1>Login</h1>
-        </div>
-
-        
-
-            <form onSubmit={this.submitHandler}> 
+                <form onSubmit={submitHandler}>
 
                     <div class="txt_field">
-                    <input type="text" id="email" name="email" value={this.state.email} onChange = {this.changeHandler} required/>
-                    <span></span>
-                    <label>Enter Email</label>
+                        <input type="text" id="email" name="email" value={email} onChange = {changeHandlerEmail} required/>
+                        <span></span>
+                        <label>Enter Email</label>
                     </div>
 
                     <div class="txt_field">
-                    <input type="password" id="password" name="password" value={this.state.password} onChange = {this.changeHandler} required/>
-                    <span></span>
-                    <label>Enter Password</label>
+                        <input type="password" id="password" name="password" value={password} onChange = {changeHandlerPassword} required/>
+                        <span></span>
+                        <label>Enter Password</label>
                     </div>
 
                     <div class="pass"><Link to="/frgtpass">Forgot Password?</Link></div>
@@ -111,18 +109,18 @@ class Login extends React.Component{
                     <br/>
 
                     </div>
-             </form>
 
-             
+                </form>
+
+            </div>
+
+                <div class="footer">
+                    <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
+                </div>
+
         </div>
-                    <div class="footer">
-                        <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
-                    </div>
-    </div> 
-    
-    
-        );
-    } 
+
+    );
 }
 
 export default Login;

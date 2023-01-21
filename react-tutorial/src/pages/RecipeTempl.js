@@ -1,19 +1,21 @@
 import React from "react";
 
-class RecipeTempl extends React.Component {
-    render(){
-        return(
-            <div>
-                <h1>Beispiel</h1>
+import Footer from "./pageComponent/Footer";
+import ContentBox from "./pageComponent/ContentBox";
 
-                            <div class="footer">
-                                <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
-                            </div>
+function RecipeTempl(props){
 
-            </div>
-            
-        );
-    }
+    return(
+        <div >
+
+            <ContentBox></ContentBox>
+            <ContentBox></ContentBox>
+            <ContentBox></ContentBox>
+
+            <Footer></Footer>
+
+        </div>
+    ); 
 }
 
 export default RecipeTempl; 

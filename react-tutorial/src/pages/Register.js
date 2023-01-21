@@ -24,6 +24,7 @@ function Register(props){
     function changeHandlerAdmin(event){
         setAdmin(event.target.value);
     }
+    
 
     function submitHandler(event){
         event.preventDefault()

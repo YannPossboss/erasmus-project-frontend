@@ -34,7 +34,7 @@ console.log("middleware was loaded");
 //START OF API
 
 //Register
-app.post("/api/register", (req,res)=>{
+app.post("/register", (req,res)=>{
     db.all("SELECT * FROM users", [], async (err,rows) => {
         if (err) return console.error(err.message);
         let emailIsInUse = false;
@@ -66,7 +66,7 @@ app.post("/api/register", (req,res)=>{
 });
 
 //Login
-app.post("/api/login", (req,res) => {
+app.post("/login", (req,res) => {
     db.all("SELECT * FROM users", [], async (err,rows) => {
         let emailExist = false;
         let dataset;
@@ -81,11 +81,25 @@ app.post("/api/login", (req,res) => {
         if(!validPass) {return res.status(400).send("Invalid Password"); }
         
         //Create and assign a token
-        const token = jwt.sign(dataset.id, process.env.TOKEN_SECRET)
-        res.header("auth-token", token).send("Logged in");
+        const token = jwt.sign({id: dataset.id, test: true}, process.env.TOKEN_SECRET)
+        res.header("auth-token", token).send(token);
         console.log("Debuginfo  Eingelogt: " + token);
     });
 });
+
+//Middleware für Authentifizierung
+app.use("/secured/*", (req,res,next) => {
+    const m = jwt.verify(req.body.token, process.env.TOKEN_SECRET);
+    if(m.test){
+        next();
+    }else{
+        res.res.status(400).send("Invalid Token");
+    }
+});
+
+//Hier können geschützte Routen hin >>>>>>>
+
+//Hier können geschützte Routen hin <<<<<<<
 
 
 

@@ -6,11 +6,14 @@ import hems from "./logo/hems.jpg"
 
 import { Link } from 'react-router-dom';
 
+import {useNavigate} from "react-router-dom";
+
 function Register(props){
-    
+    const navigate = useNavigate()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [admin, setAdmin] = useState("");
+    
     
 
     function changeHandlerEmail(event){
@@ -33,9 +36,10 @@ function Register(props){
             password: password,
             admin: admin
         }
-        axios.post('http://localhost:5000/api/register', data)
+        axios.post('http://localhost:5000/register', data)
         .then(response =>{
             console.log(response)
+            navigate("/login")
         })
         .catch(error => {
             console.log(error)

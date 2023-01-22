@@ -8,14 +8,17 @@ import {useNavigate} from "react-router-dom";
 
 import {Link} from "react-router-dom";
 
+import { useCookies } from "react-cookie";
+
+
+
 
 
 function Login(props){
     const navigate = useNavigate()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-
+    const [cookies, setCookie, removeCookie] = useCookies(['name']);
 
     function changeHandlerEmail(event){
         setEmail(event.target.value);
@@ -31,14 +34,16 @@ function Login(props){
             email: email,
             password: password
         }
-        axios.post('http://localhost:5000/api/login', data)
+        axios.post('http://localhost:5000/login', data)
         .then(response =>{
             console.log(response)
+            removeCookie("token");
+            setCookie("token", response.data, {path: "/"});
+            navigate("/recipe");
         })
         .catch(error => {
             console.log(error) 
         })
-        navigate("/create");
     }
 
 

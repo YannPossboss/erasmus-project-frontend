@@ -8,6 +8,17 @@ function RecipeTempl(props){
     return(
         <div >
 
+            <div class="w3-center">
+
+                <div class="navigation">
+                    <button>←</button>
+                    <button>→</button>
+                </div>
+
+            </div>
+
+            
+
             <ContentBox></ContentBox>
             <ContentBox></ContentBox>
             <ContentBox></ContentBox>

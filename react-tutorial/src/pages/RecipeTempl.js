@@ -5,10 +5,12 @@ import ContentBox from "./pageComponent/ContentBox";
 
 import { useCookies } from "react-cookie";
 
+import {useNavigate} from "react-router-dom";
+
 import axios from 'axios';
 
 function RecipeTempl(props){
-
+    const navigate = useNavigate()
     const [cookies, setCookie, removeCookie] = useCookies(['name']);
 
     const [recipeShowNumber, setRecipeShowNumber ] = useState(1);
@@ -60,8 +62,16 @@ function RecipeTempl(props){
         console.log(recipeShowNumber);
     }
 
+    function logout(event){
+        event.preventDefault();
+        removeCookie("token");
+        navigate("/");
+    }
+
     return(
         <div >
+
+            <button class="w3-bar-item w3-text-white w3-button w3-red" onClick={logout}>Logout</button>
 
             <div class="w3-center">
 

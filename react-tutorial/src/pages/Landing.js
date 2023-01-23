@@ -58,7 +58,7 @@ class Landing extends React.Component {
                             <br/>
 
                             <div class="style3 w3-center">
-                            <Link to="/country"><input type="submit" value="Continue without Login"/></Link>   
+                            <Link to="/recipe"><input type="submit" value="Continue without Login"/></Link>   
                             </div>
 
                             <br/>

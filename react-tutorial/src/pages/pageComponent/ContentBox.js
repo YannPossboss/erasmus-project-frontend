@@ -12,8 +12,8 @@ function ContentBox(props){
     return(
 
         <div class="contentboxl">   
-                
-                <h1>{props.recipeContent.id}&nbsp;{props.recipeContent.name}</h1>
+                <h2>{props.recipeContent.id} / {props.recipeContent.length}</h2>
+                <h1>{props.recipeContent.name}</h1>
 
                 <div class="contentboxtextl">
 

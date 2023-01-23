@@ -956,6 +956,10 @@ html{
     background-color: rgba(1, 168, 18, 0.596);
     color: white;
   }
+
+  .contentboxl h2{
+    text-align: center;
+  }
   .contentboxl h3{
     margin-left: 30px;
     color: white;
@@ -997,6 +1001,7 @@ html{
   }
 
   .contentboxtextl h2 {
+    text-align: center;
     font-size: 25px;
     margin-left: 10px;
     margin-bottom: -10px;

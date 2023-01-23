@@ -48,7 +48,7 @@ function RecipeTempl(props){
 
     function onClickHandlerRight(event){
         event.preventDefault();
-        if(recipeContent1.length > recipeShowNumber + 2){
+        if(recipeContent1.length + 2 > recipeShowNumber + 2){
             setRecipeShowNumber(recipeShowNumber + 1)
             console.log(recipeShowNumber);
         }

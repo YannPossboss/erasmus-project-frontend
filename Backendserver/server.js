@@ -92,7 +92,13 @@ app.post("/recipe", (req,res) =>{
     db.all("SELECT * FROM recipes", [], async (err,rows) => {
         let recipe = rows.at(req.body.recipeId - 1);
         let recipewithdata = {...recipe, "length": rows.length}
-        res.header("recipe"+req.body.recipeId, recipewithdata).send(recipewithdata);
+        let recipewithdataReady = {...recipewithdata, test: false}
+        if(rows.length > req.body.recipeId - 1){
+            recipewithdataReady = {...recipewithdata, test: true}
+        }
+            
+        
+        res.header("recipe"+req.body.recipeId, recipewithdataReady).send(recipewithdataReady);
     });
 });
 

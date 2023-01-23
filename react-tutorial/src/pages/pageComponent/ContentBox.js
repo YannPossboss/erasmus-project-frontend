@@ -5,10 +5,7 @@ import flag from "./ComponentImg/flag_s_s.png"
 
 function ContentBox(props){
 
-    if(props.recipeContent == null){
-        return(<h1></h1>);
-    }
-    
+    if(props.recipeContent.test){   
     return(
 
         <div class="contentboxl">   
@@ -84,6 +81,10 @@ function ContentBox(props){
 
             
     );
+
+    }else{
+        return(<h1></h1>);
+    }
 }
 
 export default ContentBox; 

@@ -1,14 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 
 import food from "./ComponentImg/fabada.jpg"
 import flag from "./ComponentImg/flag_s_s.png"
 
 function ContentBox(){
+    
+
+    const [recipeContent, setRecipeContent] = useState({"name":"Fabada", "country":"Spain", "recipetime": "60 min. - 90 min." ,
+    "describtion":"Hailing from the Asturia region in northwest Spain, but understandably popular across the whole country, fabada is an incredibly tasty dish considering how simpleit is to make. Good quality chorizo and morcilla is the key to a good fabada, and if you can find cured or smoked pork belly, even better! If using dried white beans, be sure tosoak them overnight before cooking.",
+    "task1":"1. Heat a splash of oil in a heavy-based pan and add the chorizo, morcilla and pork belly. Cook until you have a nice colour on the sausages and the fat has started to render from the pork belly",
+    "task2": "2. Add the onion and garlic and sauté until soft and translucent",
+    "task3": "3. Add the herbs and spices and pour over the stock. Season with salt and pepper",
+    "task4": "4. Leave to simmer for 45 minutes, then remove the lid, add the drained beans and simmer for 30 minutes more. Taste to check seasoning",
+    "task5": "5. Serve warm with crusty bread",
+    "task6": "",
+    "task7": "",
+    "task8": "",
+    "task9": "",
+    "task10": "",
+    "ingredient1": "4 cooking chorizos",
+    "ingredient2": "4 morcilla sausages",
+    "ingredient3": "250g of pork belly, sliced into thick lardons",
+    "ingredient4": "1 white onion, diced",
+    "ingredient5": "2 garlic cloves, sliced",
+    "ingredient6": "1 sprig of rosemary",
+    "ingredient7": "2 bay leaves",
+    "ingredient8": "1 tsp pimentón",
+    "ingredient9": "1 pinch of powdered saffron",
+    "ingredient10": "600ml of vegetable stock, or water",
+    "ingredient11": "400g of white beans, (one tin, drained)",
+    "ingredient12": "olive oil",
+    "ingredient13": "salt",
+    "ingredient14": "pepper",
+    "ingredient15": "",
+    "ingredient16": "",
+    "ingredient17": "",
+    "ingredient18": "",
+    "ingredient19": "",
+    "ingredient20": ""
+    });
+
+    
+    
+
+    
+
     return(
 
         <div class="contentboxl">   
-
-                <h1>Fabada</h1>
+                
+                <h1>{recipeContent.name}</h1>
 
                 <div class="contentboxtextl">
 
@@ -19,9 +60,9 @@ function ContentBox(){
                     <br/>
                     <br/>
                     <br/>
-                    <h3>Region: &nbsp; &nbsp;<a href="https://shorturl.at/inrZ0">Spain</a></h3>
+                    <h3>Region: &nbsp; &nbsp;<a href="https://shorturl.at/inrZ0">{recipeContent.country}</a></h3>
                     <br/>
-                    <h3>Time:   &nbsp; &nbsp; &nbsp; 60 min. - 90 min. ⏱️</h3>
+                    <h3>Time:   &nbsp; &nbsp; &nbsp; {recipeContent.recipetime} ⏱️</h3>
                     <br/>
                 </div>
 
@@ -29,57 +70,55 @@ function ContentBox(){
 
                 <div class="contentboxtextl">
 
-                    <h4>
-                        Hailing from the Asturia region in northwest Spain, 
-                        but understandably popular across the whole country, 
-                        fabada is an incredibly tasty dish considering how simple
-                        it is to make. Good quality chorizo and morcilla is the key
-                        to a good fabada, and if you can find cured or smoked pork 
-                        belly, even better! If using dried white beans, be sure to
-                        soak them overnight before cooking.
-                    </h4>
+                    <h4>{recipeContent.describtion}</h4>
 
                 </div>
                 
                 <div class="contentboxtextl">
                     <h2>Method: </h2>
                     <hr></hr>
-                    <h4>1.
-                            Heat a splash of oil in a heavy-based pan and add the chorizo,
-                            morcilla and pork belly. Cook until you have a nice colour on 
-                            the sausages and the fat has started to render from the 
-                            pork belly</h4>
-                    <h4>2.
-                            Add the onion and garlic and sauté until soft and translucent</h4>
-                    <h4>3.
-                            Add the herbs and spices and pour over the stock. Season with
-                            salt and pepper</h4>
-                    <h4>4.
-                            Leave to simmer for 45 minutes, then remove the lid, add the
-                            drained beans and simmer for 30 minutes more. Taste to check seasoning</h4>
-                    <h4>5.
-                            Serve warm with crusty bread</h4>
+                    <h4>{recipeContent.task1}</h4>
+                    <h4>{recipeContent.task2}</h4>
+                    <h4>{recipeContent.task3}</h4>
+                    <h4>{recipeContent.task4}</h4>
+                    <h4>{recipeContent.task5}</h4>
+                    <h4>{recipeContent.task6}</h4>
+                    <h4>{recipeContent.task7}</h4>
+                    <h4>{recipeContent.task8}</h4>
+                    <h4>{recipeContent.task9}</h4>
+                    <h4>{recipeContent.task10}</h4>
                 </div>
 
                 <div class="contentboxtextl">
                     <h2>Ingredients: </h2>
                     <hr></hr>
-                    <h4>· 4 cooking chorizos</h4>
-                    <h4>· 4 morcilla sausages</h4>
-                    <h4>· 250g of pork belly, sliced into thick lardons</h4>
-                    <h4>· 1 white onion, diced</h4>
-                    <h4>· 2 garlic cloves, sliced</h4>
-                    <h4>· 1 sprig of rosemary</h4>
-                    <h4>· 2 bay leaves</h4>
-                    <h4>· 1 tsp pimentón</h4>
-                    <h4>· 1 pinch of powdered saffron</h4>
-                    <h4>· 600ml of vegetable stock, or water</h4>
-                    <h4>· 400g of white beans, (one tin, drained)</h4>
-                    <h4>· olive oil</h4>
-                    <h4>· salt</h4>
-                    <h4>· pepper</h4>
+                    <h4>{recipeContent.ingredient1}</h4>
+                    <h4>{recipeContent.ingredient2}</h4>
+                    <h4>{recipeContent.ingredient3}</h4>
+                    <h4>{recipeContent.ingredient4}</h4>
+                    <h4>{recipeContent.ingredient5}</h4>
+                    <h4>{recipeContent.ingredient6}</h4>
+                    <h4>{recipeContent.ingredient7}</h4>
+                    <h4>{recipeContent.ingredient8}</h4>
+                    <h4>{recipeContent.ingredient9}</h4>
+                    <h4>{recipeContent.ingredient10}</h4>
+                    <h4>{recipeContent.ingredient11}</h4>
+                    <h4>{recipeContent.ingredient12}</h4>
+                    <h4>{recipeContent.ingredient13}</h4>
+                    <h4>{recipeContent.ingredient14}</h4>
+                    <h4>{recipeContent.ingredient15}</h4>
+                    <h4>{recipeContent.ingredient16}</h4>
+                    <h4>{recipeContent.ingredient17}</h4>
+                    <h4>{recipeContent.ingredient18}</h4>
+                    <h4>{recipeContent.ingredient19}</h4>
+                    <h4>{recipeContent.ingredient20}</h4>
                 </div>
+                
+                
+
             </div>
+
+            
     );
 }
 

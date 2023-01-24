@@ -85,18 +85,14 @@ function RecipeTempl(props){
                             <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar"/>
                             
 
-                            <Link to="/" class="w3-bar-item w3-text-white w3-button w3-red w3-right w3-margin w3-round" onClick={logout}><b>Logout</b></Link>
-                            <Link to="/editp" class="w3-bar-item w3-text-white w3-button w3-blue w3-right w3-margin w3-round"><b>Show Profile</b></Link>
+                            <Link to="/" class="w3-bar-item w3-text-white w3-button w3-red w3-right w3-margin w3-round w3-hide-medium w3-hide-small" onClick={logout}><b>Logout</b></Link>
+                            <Link to="/editp" class="w3-bar-item w3-text-white w3-button w3-blue w3-right w3-margin w3-round w3-hide-medium w3-hide-small"><b>Show Profile</b></Link>
 
                             <buttonp class="w3-button w3-round w3-green" onClick={onClickHandlerLeft} ><b>⬅ Previous Recipe</b></buttonp>
-                            <buttonn class="w3-button w3-round w3-green" onClick={onClickHandlerRight}><b>Next Recipe ➡</b></buttonn>
-                                
-                        </div>
-                    
-                        <div id="navDemo" class="w3-bar-block w3-theme1 w3-hide w3-hide-large w3-hide-medium">
-
-                            <button class="w3-bar-item w3-text-white w3-button w3-red" onClick={logout}>Logout</button>
-
+                            <buttonn class="w3-button w3-round w3-green w3-hide-medium w3-hide-small" onClick={onClickHandlerRight}><b>Next Recipe ➡</b></buttonn>
+                            
+                            <buttonn class="w3-button w3-round w3-green w3-hide-medium w3-hide-large" onClick={onClickHandlerRight}><b>➡</b></buttonn>
+                            
                         </div>
 
                     </div>
@@ -104,8 +100,13 @@ function RecipeTempl(props){
                 </div>
 
             <ContentBox recipeContent={recipeContent1}></ContentBox>
-            <ContentBox recipeContent={recipeContent2}></ContentBox>
-            <ContentBox recipeContent={recipeContent3}></ContentBox>
+
+            <div class="w3-hide-small">
+
+                <ContentBox recipeContent={recipeContent2}></ContentBox>
+                <ContentBox recipeContent={recipeContent3}></ContentBox>
+
+            </div>
 
             <Footer></Footer>
 

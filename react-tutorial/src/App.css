@@ -4,7 +4,7 @@ html{
     background-size: 100%;
     color: lightgrey;
     overflow: visible;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
   }
 
   .logoimg {
@@ -13,6 +13,15 @@ html{
     height: 10%;
     margin-bottom: 2px;
     margin-left: 46%;
+  }
+  .landing h1 {
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .landing h3 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 30px;
   }
 
   /* Text Area Styling */
@@ -119,6 +128,10 @@ html{
     }
     .landing4 {
       color: white;
+    }
+
+    .landing h1 {
+      color:white;
     }
 
 
@@ -288,6 +301,7 @@ html{
       border-radius: 5px;
       margin-top: 10px;
       margin-bottom: 10px;
+      width: 40%;
     }
 
     /* Avatar image */
@@ -314,13 +328,13 @@ html{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #303030;
+    background: linear-gradient(120deg,#b8b8b800,#383838,#b8b8b800);
     color: white;
     text-align: center;
   }
   
   .w3-theme1 {
-    background-color: #404040;
+    background: linear-gradient(120deg,#b8b8b800,#383838,#b8b8b800);
   }
   
   
@@ -394,7 +408,7 @@ html{
       }
       /* Avatar image */
       img.avatar {
-        width: 40%;
+        width: 10%;
       }
       span{
         font-size: 20px;
@@ -511,7 +525,7 @@ html{
   
       /* Avatar image */
       img.avatar {
-        width: 40%;
+        width: 20%;
       }
       span{
         font-size: 20px;
@@ -596,6 +610,7 @@ html{
     .center form{
       padding: 0 40px;
       box-sizing: border-box;
+      margin-bottom: 30px;
     }
     /* new Design for Page Creations */
     .center2{
@@ -664,13 +679,13 @@ html{
       left: 0;
       width: 0%;
       height: 2px;
-      background: #1ca33e;
+      background: #202020;
       transition: .5s;
     }
     .txt_field input:focus ~ label,
     .txt_field input:valid ~ label{
       top: -5px;
-      color: #1ca33e;
+      color: #202020;
     }
     .txt_field input:focus ~ span::before,
     .txt_field input:valid ~ span::before{
@@ -687,23 +702,73 @@ html{
       text-decoration: underline;
     }
     input[type="submit"]{
-      width: 90%;
+      width: 25%;
       height: 50px;
       border: 1px solid;
       color: white;
       border-radius: 25px;
       font-size: 20px;
-      background: linear-gradient(120deg,#34f766,#0d6924);
+      background: #38383898;
       font-weight: 700;
       cursor: pointer;
       outline: none;
-      margin-left: 30px;
-      border-color: #26d953;
+      box-shadow: 4px 7px 6px 6px #8888886c;
+      margin-top: 3%;
+      margin-left: 37.5%;
+      border-color: white;
     }
     input[type="submit"]:hover{
       border-color: white;
+      box-shadow: 6px 9px 8px 8px #ffffff42;
       transition: .5s;
     }
+
+    input[type="submit2"]{
+      width: 25%;
+      height: 50px;
+      border: 1px solid;
+      color: white;
+      border-radius: 25px;
+      font-size: 20px;
+      background: #38383898;
+      font-weight: 700;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 4px 7px 6px 6px #8888886c;
+      margin-top: 13%;
+      margin-left: 37.5%;
+      text-align: center;
+      border-color: #cacaca;
+    }
+    input[type="submit2"]:hover{
+      border-color: white;
+      box-shadow: 6px 9px 8px 8px #ffffff42;
+      transition: .5s;
+    }
+
+    input[type="submitNavi"]{
+      width: 70%;
+      height: 50px;
+      border: 1px solid;
+      color: white;
+      border-radius: 25px;
+      font-size: 16px;
+      background: #38383898;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 4px 7px 6px 6px #8888886c;
+      margin-top: 13%;
+      margin-left: 15%;
+      text-align: center;
+      border-color: #cacaca;
+    }
+    input[type="submitNavi"]:hover{
+      border-color: white;
+      box-shadow: 6px 9px 8px 8px #ffffff42;
+      transition: .5s;
+    }
+
     .style2 input[type="submit"]{
       width: 90%;
       height: 50px;
@@ -711,17 +776,23 @@ html{
       color: white;
       border-radius: 25px;
       font-size: 20px;
-      background: linear-gradient(120deg,#d1ae11,#d98609);
+      background: #38383898;
       font-weight: 700;
       cursor: pointer;
       outline: none;
       margin-left: 30px;
-      border-color: #d1ae11
+      margin-top: 7%;
+      border-color: #cacaca;
     }
     .style2 input[type="submit"]:hover{
       border-color: white;
+      box-shadow: 6px 9px 8px 8px #ffffff42;
       transition: .5s;
     }
+    .style2 Link{
+      margin-bottom: 10px;
+    }
+
     .style3 input[type="submit"]{
       width: 90%;
       height: 50px;
@@ -772,6 +843,9 @@ html{
     .signup_link a:hover{
       text-decoration: underline;
     }
+
+    /* Hier ist das Styling fürs Mobile Landing */
+
     @media screen and (max-width: 535px){
       html{
         background-color: #121212;
@@ -796,6 +870,13 @@ html{
         border-bottom: 1px solid silver;
         color: white;
         font-size: 25px;
+      }
+      .center h5{
+        font-size: 16px;
+      }
+      .center h3{
+        font-size: 20px;
+        margin-bottom: 15px;
       }
       .center form{
         padding: 0 20px;
@@ -835,40 +916,28 @@ html{
         cursor: pointer;
         font-size: 16px;
       }
-      input[type="submit"]{
-        width: 90%;
-        height: 50px;
-        border: 1px solid;
-        color: white;
-        border-radius: 25px;
-        font-size: 20px;
-        background: linear-gradient(120deg,#34f766,#0d6924);
-        font-weight: 700;
-        cursor: pointer;
-        outline: none;
-        margin-left: 17px;
-        border-color: #26d953;
-    }
       .style2 input[type="submit"]{
-        width: 90%;
+        width: 80%;
         height: 50px;
         border: 1px solid;
         color: white;
         border-radius: 25px;
-        font-size: 20px;
-        background: linear-gradient(120deg,#d1ae11,#d98609);
-        font-weight: 700;
+        font-size: 13px;
+        background: #38383898;
+        font-weight: 600;
         cursor: pointer;
         outline: none;
-        margin-left: 17px;
-        border-color: #d1ae11
+        margin-left: 32px;
+        border-color: #cacaca;
+        margin-bottom: 20px;
       }
       .imgcontainer {
         text-align: center;
         margin: 24px 0 12px 0;
       }
-    }
 
+    }
+    
     /*Drag And Drop CSS file*/
     
     .files input {
@@ -952,7 +1021,7 @@ html{
 
   .contentboxl h1{
     text-align: center;
-    background-color: rgba(1, 168, 18, 0.596);
+    background: linear-gradient(120deg,#eeeeee00,#919191,#eeeeee00);
     color: white;
   }
 
@@ -1021,17 +1090,17 @@ html{
   }
   .recipeHeader buttonp{
     width: 200px;
-    margin-left: 48%;
-    margin-top: -10px;
-    background: linear-gradient(120deg,#1f943c,#094d1a);
-    border: 2px solid #28be4e;
+    
+    background: linear-gradient(120deg,#eeeeee00,#686868,#eeeeee00);
+    border: 2px solid #383838;
+    color:white; 
   }
   .recipeHeader buttonn{
     width: 200px;
-    margin-top: -10px;
-    margin-left: 10px;
-    border: 2px solid #28be4e;
-    background: linear-gradient(120deg,#094d1a,#1f943c);
+    
+    border: 2px solid #383838;
+    background: linear-gradient(120deg,#eeeeee00,#686868,#eeeeee00);
+    color:white;
   }
 
   @media screen and (max-width: 450px){
@@ -1110,4 +1179,140 @@ html{
     /* Link Buttons werden erst einmal MOBIL nicht angezeigt 
     -> Vorerst kein Styling möglich */
   }
+  .landingnew h1{
+    color: #ffffff;
+    margin-left: 39%;
+    margin-top: 15%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 60px;
+  }
+  .landingnew h2{
+    color: #ffffff;
+    margin-left: 25%;
+    margin-top: 10px;
+    font-family:'Times New Roman', Times, serif;
+  }
+.textfont h1 h2 h3 h4 h5 h6{
+  font-family: 'Times New Roman', Times, serif;
+}
+.margintop h1{
+  margin-top: 15%;
+  font-size: 60px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+.margintop h2{
+  margin-top: 1%;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+input[type="submitchange"]{
+  float: right;
+  margin-top: 0.5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 5%;
+  height: 40px;
+  border: 1px solid;
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  background: #38383898;
+  font-weight: 500;
+  cursor:pointer;
+  outline: none;
+  box-shadow: 2px 3px 3px 3px #8888886c;
+  border-color: white;
+}
+input[type="submitchange"]:hover{
+  border-color: white;
+  box-shadow: 3px 4px 4px 4px #ffffff42;
+  transition: .5s;
+}
+input[type="submitchange"]:focus{
+  visibility:hidden;
+  outline: none;
+}
+
+input[type="submitchangeM"]{
+  float: right;
+  margin-top: 2%;
+  margin-left: 5px;
+  margin-right:20%;
+  width: 20%;
+  height: 40px;
+  border: 1px solid;
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  background: #38383898;
+  font-weight: 500;
+  cursor:pointer;
+  outline: none;
+  box-shadow: 2px 3px 3px 3px #8888886c;
+  border-color: white;
+}
+input[type="submitchangeM"]:hover{
+  border-color: white;
+  box-shadow: 3px 4px 4px 4px #ffffff42;
+  transition: .5s;
+}
+input[type="submitchangeB"]{
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right:5px;
+  width: 20%;
+  height: 40px;
+  border: 1px solid;
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  background: #38383898;
+  font-weight: 500;
+  cursor:pointer;
+  outline: none;
+  box-shadow: 2px 3px 3px 3px #8888886c;
+  border-color: white;
+}
+input[type="submitchangeB"]:hover{
+  border-color: white;
+  box-shadow: 3px 4px 4px 4px #ffffff42;
+  transition: .5s;
+}
+input[type="submitchangeM"]:focus{
+  visibility:hidden;
+  outline: none;
+}
+input[type="submitchangeB"]:focus{
+  visibility:hidden;
+  outline: none;
+}
+
+input[type="submitchangeT"]{
+  margin-top: 5%;
+  margin-left: 5px;
+  margin-right:5px;
+  width: 20%;
+  height: 40px;
+  border: 1px solid;
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  background: #38383898;
+  font-weight: 500;
+  cursor:pointer;
+  outline: none;
+  box-shadow: 2px 3px 3px 3px #8888886c;
+  border-color: white;
+}
+input[type="submitchangeT"]:hover{
+  border-color: white;
+  box-shadow: 3px 4px 4px 4px #ffffff42;
+  transition: .5s;
+}
+input[type="submitchangeT"]:focus{
+  visibility:hidden;
+  outline: none;
+}
 

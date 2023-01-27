@@ -4,6 +4,9 @@ import axios from 'axios';
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
 
+
+import Footer from "./pageComponent/Footer";
+
 import { Link } from 'react-router-dom';
 
 class RegisterErr extends React.Component{
@@ -111,13 +114,7 @@ class RegisterErr extends React.Component{
                     </form>
 
                 </div>
-
-                <div class="footer">
-
-                    <p>&copy; 2019 | 2022 HEMS | Erasmus+ Demo </p>
-
-                </div>
-
+                <Footer></Footer>
             </div>
         );
     }

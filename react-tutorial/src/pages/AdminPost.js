@@ -5,6 +5,7 @@ import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
 
 import { Link } from 'react-router-dom';
+import Footer from "./pageComponent/Footer"; 
 
 class AdminPost extends React.Component {
 
@@ -133,9 +134,7 @@ class AdminPost extends React.Component {
                      </form>                    
                     </div>
                 </div> 
-                            <div class="footer">
-                                <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
-                            </div>
+                <Footer></Footer>
             </div>
         );
     };

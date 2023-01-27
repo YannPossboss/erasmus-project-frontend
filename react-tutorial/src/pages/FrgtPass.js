@@ -2,7 +2,8 @@ import React from "react";
 import axios from 'axios';
 
 import erasmus from "./logo/img_avatar2.png"
-import hems from "./logo/hems.jpg"
+
+import Footer from "./pageComponent/Footer"; 
 
 import { Link } from 'react-router-dom';
 
@@ -40,28 +41,11 @@ class FrgtPass extends React.Component {
         return (
             <div>
 
-                <div class="w3-top">
-                    <div class="w3-bar w3-theme1" id="myNavbar">
-                    <Link to="/" class="w3-bar-item w3-text-white w3-button w3-green">Go to Login</Link>
-                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
-                    </div>
-                </div>
-
-                <div class="imgcontainer w3-hide-small">
-                    <img src={erasmus} alt="Avatar" class="avatar"/>
-                    <img src={hems} alt="Avatar2" class="avatar"/>
-                </div>
+                <img src={erasmus} alt="Avatar" class="avatar w3-right w3-hide-middle w3-hide-small"/>
 
                 <div class="center">
 
-                <div class=" w3-center w3-hide-large w3-margin-top">
-                    <img src={erasmus} alt="Avatar" class="avatar"/>
-                    <img src={hems} alt="Avatar2" class="avatar"/>
-
-                    <h1>Login</h1>
-                </div>
-
-                    <h1>[WebseiteName] <br/>Forgot Password </h1>
+                    <h1>Forgot Password </h1>
 
                     <form onSubmit={this.submitHandler}>
 
@@ -77,23 +61,15 @@ class FrgtPass extends React.Component {
                         <label>Enter Email</label>
                     </div>
 
-                    <div class="signup_link">
-                        <div class="style3">
+                        <div class="style2">
                             <input type="submit" value="Send new Password"/>
+                            <Link to="/login"><input type="submit" value="Cancel"/></Link>
                         </div>
-                        <br/>
-                        <Link to="/" class="w3-button w3-red">Cancel</Link>
-                        <br/>
-                    </div>
 
                     </form>
 
                 </div>
-
-                            <div class="footer">
-                                <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
-                            </div>
-
+                <Footer></Footer>
             </div>
         );
     }

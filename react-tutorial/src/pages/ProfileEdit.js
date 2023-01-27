@@ -1,6 +1,7 @@
 import React from "react";
 
 import person from "./logo/person.png"
+import Footer from "./pageComponent/Footer"; 
 
 import { Link } from 'react-router-dom';
 
@@ -11,8 +12,8 @@ class ProfileEdit extends React.Component {
                 
                 <div class="w3-top">
                     <div class="w3-bar w3-theme1" id="myNavbar">
-                    <Link to="/country" class="w3-bar-item w3-text-white w3-button w3-dark-gray"> ⬅ Back</Link>
-                    <Link to="/impress" class="w3-bar-item w3-button w3-text-white w3-right w3-dark-gray">Legal notice</Link>
+                    <br/>
+                    <br/>
                     </div>
                 </div>
 
@@ -88,11 +89,7 @@ class ProfileEdit extends React.Component {
                         </div>
 
                 </div>
-
-                            <div class="footer">
-                                <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
-                            </div>
-
+                <Footer></Footer>
             </div>
         );
     }

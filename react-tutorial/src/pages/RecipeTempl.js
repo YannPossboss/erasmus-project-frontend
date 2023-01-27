@@ -2,9 +2,8 @@ import React,{ useState } from "react";
 
 import Footer from "./pageComponent/Footer";
 import ContentBox from "./pageComponent/ContentBox";
-
-import hems from "./pageComponent/ComponentImg/hems.jpg"
-import erasmus from "./pageComponent/ComponentImg/img_avatar2.png"
+ 
+import erasmus from "./pageComponent/ComponentImg/img_avatar2.png"; 
 
 import { useCookies } from "react-cookie";
 
@@ -74,25 +73,30 @@ function RecipeTempl(props){
 
     return(
         <div >
-
+            
                 <div class="w3-top">
 
                     <div class="recipeHeader">
 
                         <div class="w3-bar w3-theme1" id="myNavbar">
 
-                            <img src={hems} alt="ImgNotFound" class="avatar w3-bar w3-round w3-margin"/>
-                            <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar"/>
-                            
+                            <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin"/>
+                        
+                                <Link to="/" onClick={logout}><input type="submitchange" class="w3-center w3-hide-small" value="Logout" onClick={logout}></input></Link>
+                                <Link to="/editp"><input type="submitchange" class="w3-center w3-hide-small" value="Profile"></input></Link>
+                                <input type="submitchange" class="w3-center w3-hide-small"value=" ➡"  onClick={onClickHandlerRight}></input>
+                                <input type="submitchange" class="w3-center w3-hide-small" value=" ⬅ " onClick={onClickHandlerLeft}></input>
 
-                            <Link to="/" class="w3-bar-item w3-text-white w3-button w3-red w3-right w3-margin w3-round w3-hide-medium w3-hide-small" onClick={logout}><b>Logout</b></Link>
-                            <Link to="/editp" class="w3-bar-item w3-text-white w3-button w3-blue w3-right w3-margin w3-round w3-hide-medium w3-hide-small"><b>Show Profile</b></Link>
+                                <Link to="/" onClick={logout}><input type="submitchangeT" class="w3-center w3-hide-large" value="Logout" onClick={logout}></input></Link>
+                                <Link to="/editp"><input type="submitchangeT" class="w3-center w3-hide-large" value="Profile"></input></Link>
 
-                            <buttonp class="w3-button w3-round w3-green" onClick={onClickHandlerLeft} ><b>⬅ Previous Recipe</b></buttonp>
-                            <buttonn class="w3-button w3-round w3-green w3-hide-medium w3-hide-small" onClick={onClickHandlerRight}><b>Next Recipe ➡</b></buttonn>
-                            
-                            <buttonn class="w3-button w3-round w3-green w3-hide-medium w3-hide-large" onClick={onClickHandlerRight}><b>➡</b></buttonn>
-                            
+                        </div>
+
+                        <div class="w3-hide-large">
+
+                            <input type="submitchangeM" class="w3-center"value="Next"  onClick={onClickHandlerRight}></input>
+                            <input type="submitchangeB" class="w3-center" value="Back" onClick={onClickHandlerLeft}></input>
+
                         </div>
 
                     </div>
@@ -102,7 +106,6 @@ function RecipeTempl(props){
             <ContentBox recipeContent={recipeContent1}></ContentBox>
 
             <div class="w3-hide-small">
-
                 <ContentBox recipeContent={recipeContent2}></ContentBox>
                 <ContentBox recipeContent={recipeContent3}></ContentBox>
 

@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import erasmus from "./logo/img_avatar2.png"
 import hems from "./logo/hems.jpg"
+
+import Footer from "./pageComponent/Footer";
 import Invalidtxt from "./pageComponent/Invalidtxt";
 
 import { Link } from 'react-router-dom';
@@ -117,9 +119,7 @@ class LoginErr extends React.Component{
 
              
         </div>
-                    <div class="footer">
-                        <p>&copy; 2019 | 2022 HEMS | Erasmus+ FinalBuild </p>
-                    </div>
+        <Footer></Footer>
     </div> );
     }
 }

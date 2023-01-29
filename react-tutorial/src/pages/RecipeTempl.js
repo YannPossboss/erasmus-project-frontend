@@ -17,37 +17,41 @@ function RecipeTempl(props){
     const [cookies, setCookie, removeCookie] = useCookies(['name']);
 
     const [recipeShowNumber, setRecipeShowNumber ] = useState(1);
+    const [recipeShowNumberUpdate, setRecipeShowNumberUpdate ] = useState(0);
     const [recipeContent1, setRecipeContent1] = useState({});
     const [recipeContent2, setRecipeContent2] = useState({});
     const [recipeContent3, setRecipeContent3] = useState({});
 
-    
-    axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber})
+    if(recipeShowNumberUpdate != recipeShowNumber){
+        setRecipeShowNumberUpdate(recipeShowNumber);
+        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber})
+            .then(response =>{
+                console.log(response)
+                setRecipeContent1(response.data)
+            })
+            .catch(error => {
+                console.log(error) 
+            })
+
+        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 1})
         .then(response =>{
             console.log(response)
-            setRecipeContent1(response.data)
+            setRecipeContent2(response.data)
         })
         .catch(error => {
             console.log(error) 
         })
 
-    axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 1})
-    .then(response =>{
-        console.log(response)
-        setRecipeContent2(response.data)
-    })
-    .catch(error => {
-        console.log(error) 
-    })
+        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 2})
+        .then(response =>{
+            console.log(response)
+            setRecipeContent3(response.data)
+        })
+        .catch(error => {
+            console.log(error) 
+        })
 
-    axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 2})
-    .then(response =>{
-        console.log(response)
-        setRecipeContent3(response.data)
-    })
-    .catch(error => {
-        console.log(error) 
-    })
+    }
 
     function onClickHandlerRight(event){
         event.preventDefault();

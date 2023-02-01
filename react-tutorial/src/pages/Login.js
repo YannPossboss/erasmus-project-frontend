@@ -40,7 +40,7 @@ function Login(props){
             console.log(response)
             removeCookie("token");
             setCookie("token", response.data, {path: "/"});
-            navigate("/recipe");
+            navigate("/navigation");
         })
         .catch(error => {
             console.log(error) 

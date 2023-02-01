@@ -108,11 +108,29 @@ app.use("/secured/*", (req,res,next) => {
     if(m.test){
         next();
     }else{
-        res.res.status(400).send("Invalid Token");
+        res.status(400).send("Invalid Token");
     }
 });
 
 //Hier können geschützte Routen hin >>>>>>>
+app.post("/secured/user", (req,res) =>{
+    const m = jwt.verify(req.body.token, process.env.TOKEN_SECRET);
+    let user = null;
+    db.all("SELECT * FROM users", [], async (err,rows) => {
+        for(let i = 0; i < rows.length; i++){
+            if (rows.at(i).id == m.id){
+                user = rows.at(i);
+                res.header("user", user).send(user);
+            }
+        }
+        if(user == null){
+            res.status(400).send("Your not loged in")   
+        }
+        
+    })
+
+})
+
 app.post("/secured/create", (req,res) =>{
     db.all("SELECT * FROM recipes", [], async (err,rows) => {
 

@@ -6,8 +6,29 @@ import erasmus from "./logo/img_avatar2.png"
 
 import { Link } from 'react-router-dom';
 
-class Landing extends React.Component {
-    render () {
+import { useCookies } from "react-cookie";
+
+import {useNavigate} from "react-router-dom";
+
+import axios from "axios";
+
+function Landing(props){
+    const navigate = useNavigate()
+    const [cookies] = useCookies(['name']);
+
+    console.log(cookies.token)
+    axios.post("http://localhost:5000/secured/user", {token: cookies.token})
+    .then(response =>{
+        console.log(response)
+        navigate("/navigation");
+    })
+    .catch(error => {
+        console.log(error)
+    })
+
+    
+
+
         return (
             <div>
                 <div> 
@@ -72,6 +93,6 @@ class Landing extends React.Component {
             </div>
         );
     }
-}
+
 
 export default Landing;

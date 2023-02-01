@@ -6,8 +6,28 @@ import erasmus from "./logo/img_avatar2.png"
 
 import { Link } from 'react-router-dom';
 
-class Navigation extends React.Component {
-    render() {
+import {useNavigate} from "react-router-dom";
+import { useCookies } from "react-cookie";
+import axios from "axios";
+
+function Navigation(props){
+    const navigate = useNavigate()
+    const [cookies] = useCookies(['name']);
+    
+    function LoginTest(event){
+        event.preventDefault();
+        axios.post("http://localhost:5000/secured/user", {token: cookies.token})
+        .then(response =>{
+            console.log(response)
+            navigate("/create");
+        })
+        .catch(error => {
+            console.log(error)
+            navigate("/login")
+        })
+    }
+        
+    
         return (
             <div>
                 
@@ -23,7 +43,7 @@ class Navigation extends React.Component {
                 </div>
 
                 <div class="landingnew w3-hide-small">
-                    <Link to="/login"><input type="submit" value="Create new Recipe +"/></Link>
+                    <Link to="/login" onClick={LoginTest}><input type="submit" value="Create new Recipe +"/></Link>
                     <Link to="/recipe"><input type="submit" value="Show me some Recipes !"/></Link>
                 </div>
 
@@ -34,7 +54,7 @@ class Navigation extends React.Component {
                 <Footer></Footer>
             </div>
         );
-    }
+    
 }
 
 export default Navigation;

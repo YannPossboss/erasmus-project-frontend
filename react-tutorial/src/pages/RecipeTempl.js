@@ -2,6 +2,8 @@ import React,{ useState } from "react";
 
 import Footer from "./pageComponent/Footer";
 import ContentBox from "./pageComponent/ContentBox";
+import ButtonProfile from "./pageComponent/ButtonProfile";
+import ButtonLogout from "./pageComponent/ButtonLogoutjs";
  
 import erasmus from "./pageComponent/ComponentImg/img_avatar2.png"; 
 
@@ -84,27 +86,32 @@ function RecipeTempl(props){
 
                         <div class="w3-bar w3-theme1" id="myNavbar">
 
-                            <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin"/>
-                        
-                                <Link to="/" onClick={logout}><input type="submitchange" class="w3-center w3-hide-small" value="Logout" onClick={logout}></input></Link>
-                                <Link to="/editp"><input type="submitchange" class="w3-center w3-hide-small" value="Profile"></input></Link>
-                                <input type="submitchange" class="w3-center w3-hide-small"value=" ➡"  onClick={onClickHandlerRight}></input>
-                                <input type="submitchange" class="w3-center w3-hide-small" value=" ⬅ " onClick={onClickHandlerLeft}></input>
+                            <div class="Buttonfix">
+                                <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-small" />
+ 
+                                <Link to="/" onClick={logout}><input type="button" class="w3-center w3-hide-small" value="Logout" onClick={logout}></input></Link>
+                                <ButtonProfile></ButtonProfile>
+                                
+                                <input type="button" class="w3-center w3-hide-small" value=" ➡ " onClick={onClickHandlerRight}></input>
+                                <input type="button" class="w3-center w3-hide-small" value=" ⬅ " onClick={onClickHandlerLeft}></input>
+                                    
+                                <div class="w3-hide-large">
+                                    <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-large" />
 
-                                <Link to="/" onClick={logout}><input type="submitchangeT" class="w3-center w3-hide-large" value="Logout" onClick={logout}></input></Link>
-                                <Link to="/editp"><input type="submitchangeT" class="w3-center w3-hide-large" value="Profile"></input></Link>
+                                    <Link to="/" onClick={logout}><input type="reset" class="w3-center w3-hide-large" value="Logout" onClick={logout}></input></Link>
+                                    <Link to="/editp"><input type="reset" class="w3-center w3-hide-large" value="Profile"></input></Link>
+                                    
+                                    <input type="reset" class="w3-center w3-hide-large w3-right w3-margin-right w3-margin-bottom"value="Next"  onClick={onClickHandlerRight}></input>
+                                    <input type="reset" class="w3-center w3-hide-large w3-left w3-margin-left" value="Back" onClick={onClickHandlerLeft}></input>
 
-                        </div>
+                                </div>
 
-                        <div class="w3-hide-large">
-
-                            <input type="submitchangeM" class="w3-center"value="Next"  onClick={onClickHandlerRight}></input>
-                            <input type="submitchangeB" class="w3-center" value="Back" onClick={onClickHandlerLeft}></input>
+                            </div>        
 
                         </div>
 
                     </div>
-
+                    
                 </div>
 
             <ContentBox recipeContent={recipeContent1}></ContentBox>

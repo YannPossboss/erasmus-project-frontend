@@ -8,21 +8,25 @@ function ButtonLogout(props){
     console.log("test")
 
     const [logedin, setLogedin ] = useState(true)
+    const [text, setText ] = useState("")
+    
     const [cookies, setCookie, removeCookie] = useCookies(['name']);
 
     axios.post("http://localhost:5000/secured/user", {token: cookies.token})
     .then(response =>{
         setLogedin(true);
+        setText("Logout");
     })
     .catch(error => {
         setLogedin(false);
+        setText("Login");
     })
 
-    if(logedin){
-        return (
-            <Link to="/" onClick={props.logout} ><input type="button" class="w3-center w3-hide-small" value="Logout"></input></Link>
-        );
-    }
+    
+    return (
+        <Link to="/" onClick={props.logout} ><input type={props.typeCustom} class={props.w3classprops} value={text}></input></Link>
+    );
+    
 }
 
 export default ButtonLogout; 

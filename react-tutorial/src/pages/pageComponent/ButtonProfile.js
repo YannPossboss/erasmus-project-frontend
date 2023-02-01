@@ -19,7 +19,7 @@ function ButtonProfile(props){
     
     if(logedin){
     return(
-            <Link to="/editp" ><input type="button" value="Profile"class="w3-center w3-hide-small"></input></Link>
+            <Link to="/editp" ><input type={props.typeCustom} value="Profile" class={props.w3classprops}></input></Link>
         );
     }
 }

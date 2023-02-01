@@ -89,8 +89,8 @@ function RecipeTempl(props){
                             <div class="Buttonfix">
                                 <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-small" />
  
-                                <ButtonLogout logout={logout}></ButtonLogout>
-                                <ButtonProfile></ButtonProfile>
+                                <ButtonLogout logout={logout} w3classprops={"w3-center w3-hide-small"} typeCustom={"button"} ></ButtonLogout>
+                                <ButtonProfile w3classprops={"w3-center w3-hide-small"} typeCustom={"button"} ></ButtonProfile>
                                 
                                 <input type="button" class="w3-center w3-hide-small" value=" ➡ " onClick={onClickHandlerRight}></input>
                                 <input type="button" class="w3-center w3-hide-small" value=" ⬅ " onClick={onClickHandlerLeft}></input>
@@ -98,8 +98,8 @@ function RecipeTempl(props){
                                 <div class="w3-hide-large">
                                     <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-large" />
 
-                                    <Link to="/" onClick={logout}><input type="reset" class="w3-center w3-hide-large" value="Logout" onClick={logout}></input></Link>
-                                    <Link to="/editp"><input type="reset" class="w3-center w3-hide-large" value="Profile"></input></Link>
+                                    <ButtonLogout logout={logout} w3classprops={"w3-center w3-hide-large"} typeCustom={"reset"} ></ButtonLogout>
+                                    <ButtonProfile w3classprops={"w3-center w3-hide-large"} typeCustom={"reset"} ></ButtonProfile>
                                     
                                     <input type="reset" class="w3-center w3-hide-large w3-right w3-margin-right w3-margin-bottom"value="Next"  onClick={onClickHandlerRight}></input>
                                     <input type="reset" class="w3-center w3-hide-large w3-left w3-margin-left" value="Back" onClick={onClickHandlerLeft}></input>

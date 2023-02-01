@@ -3,7 +3,7 @@ import React,{ useState } from "react";
 import Footer from "./pageComponent/Footer";
 import ContentBox from "./pageComponent/ContentBox";
 import ButtonProfile from "./pageComponent/ButtonProfile";
-import ButtonLogout from "./pageComponent/ButtonLogoutjs";
+import ButtonLogout from "./pageComponent/ButtonLogout.js";
  
 import erasmus from "./pageComponent/ComponentImg/img_avatar2.png"; 
 
@@ -89,7 +89,7 @@ function RecipeTempl(props){
                             <div class="Buttonfix">
                                 <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-small" />
  
-                                <Link to="/" onClick={logout}><input type="button" class="w3-center w3-hide-small" value="Logout" onClick={logout}></input></Link>
+                                <ButtonLogout logout={logout}></ButtonLogout>
                                 <ButtonProfile></ButtonProfile>
                                 
                                 <input type="button" class="w3-center w3-hide-small" value=" ➡ " onClick={onClickHandlerRight}></input>

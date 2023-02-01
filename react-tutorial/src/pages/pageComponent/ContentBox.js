@@ -82,8 +82,6 @@ function ContentBox(props){
             
     );
 
-    }else{
-        return(<h1></h1>);
     }
 }
 

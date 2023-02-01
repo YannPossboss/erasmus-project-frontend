@@ -95,14 +95,16 @@ function RecipeTempl(props){
                                 <input type="button" class="w3-center w3-hide-small" value=" ➡ " onClick={onClickHandlerRight}></input>
                                 <input type="button" class="w3-center w3-hide-small" value=" ⬅ " onClick={onClickHandlerLeft}></input>
                                     
-                                <div class="w3-hide-large">
+                                <div class="w3-hide-large ">
                                     <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-large" />
 
-                                    <ButtonLogout logout={logout} w3classprops={"w3-center w3-hide-large"} typeCustom={"reset"} ></ButtonLogout>
-                                    <ButtonProfile w3classprops={"w3-center w3-hide-large"} typeCustom={"reset"} ></ButtonProfile>
+                                    <ButtonProfile w3classprops={"w3-center w3-hide-large w3-margin-top w3-top"} typeCustom={"reset"} ></ButtonProfile>
+                                    <ButtonLogout logout={logout} w3classprops={"w3-center w3-hide-large w3-right w3-margin "} typeCustom={"reset"} ></ButtonLogout>
                                     
-                                    <input type="reset" class="w3-center w3-hide-large w3-right w3-margin-right w3-margin-bottom"value="Next"  onClick={onClickHandlerRight}></input>
-                                    <input type="reset" class="w3-center w3-hide-large w3-left w3-margin-left" value="Back" onClick={onClickHandlerLeft}></input>
+                                    <div>
+                                        <input type="reset" class="w3-center w3-hide-large w3-right w3-margin-right w3-margin-bottom"value="Next"  onClick={onClickHandlerRight}></input>
+                                        <input type="reset" class="w3-center w3-hide-large w3-left w3-margin-left" value="Back" onClick={onClickHandlerLeft}></input>
+                                    </div>
 
                                 </div>
 

@@ -7,7 +7,7 @@ import axios from "axios";
 
 function ButtonProfile(props){
     const [logedin, setLogedin ] = useState(true)
-    const [cookies, setCookie, removeCookie] = useCookies(['name']);
+    const [cookies] = useCookies(['name']);
 
     axios.post("http://localhost:5000/secured/user", {token: cookies.token})
     .then(response =>{

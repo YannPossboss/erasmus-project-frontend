@@ -11,6 +11,8 @@ import {Link} from "react-router-dom";
 
 import { useCookies } from "react-cookie";
 
+import Invalidtxt from "./pageComponent/Invalidtxt";
+
 
 
 
@@ -19,7 +21,20 @@ function Login(props){
     const navigate = useNavigate()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [invalidTEXT, setInvalidTEXT] = useState(false);
     const [cookies, setCookie, removeCookie] = useCookies(['name']);
+
+
+    //Wenn du eingeloggt bist, wirst du direkt zur Navigation page weitergeleitet
+    axios.post("http://localhost:5000/secured/user", {token: cookies.token})
+    .then(response =>{
+        console.log(response)
+        //Das passiert hier
+        navigate("/navigation");
+    })
+    .catch(error => {
+        console.log(error)
+    })
 
     function changeHandlerEmail(event){
         setEmail(event.target.value);
@@ -44,6 +59,7 @@ function Login(props){
         })
         .catch(error => {
             console.log(error) 
+            setInvalidTEXT(true);
         })
     }
 
@@ -58,10 +74,14 @@ function Login(props){
 
             <div class=" w3-center w3-hide-large w3-margin-top">
                 <h1>Login</h1>
+
+                <Invalidtxt text={"EMAIL or PASSWORD is wrong"} invalidTEXT={invalidTEXT}></Invalidtxt>
             </div>
 
             <div class="w3-hide-small">
                 <h1>Login</h1>
+
+                <Invalidtxt text={"EMAIL or PASSWORD is wrong"} invalidTEXT={invalidTEXT}></Invalidtxt>
             </div>
 
                 <form onSubmit={submitHandler}>

@@ -16,10 +16,11 @@ function Landing(props){
     const navigate = useNavigate()
     const [cookies] = useCookies(['name']);
 
-    console.log(cookies.token)
+    //Wenn du eingeloggt bist, wirst du direkt zur Navigation page weitergeleitet
     axios.post("http://localhost:5000/secured/user", {token: cookies.token})
     .then(response =>{
         console.log(response)
+        //Das passiert hier
         navigate("/navigation");
     })
     .catch(error => {

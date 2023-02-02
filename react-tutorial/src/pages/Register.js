@@ -7,11 +7,14 @@ import Footer from "./pageComponent/Footer";
 import { Link } from 'react-router-dom';
 import {useNavigate} from "react-router-dom";
 
+import Invalidtxt from "./pageComponent/Invalidtxt";
+
 function Register(props){
     const navigate = useNavigate()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [admin, setAdmin] = useState("");
+    const [invalidTEXT, setInvalidTEXT] = useState(false);
     
     
 
@@ -42,6 +45,7 @@ function Register(props){
         })
         .catch(error => {
             console.log(error)
+            setInvalidTEXT(true);
         })
     }
 
@@ -54,10 +58,14 @@ function Register(props){
 
                 <div class=" w3-center w3-hide-large w3-margin-top">
                     <h1>Registration</h1>
+
+                    <Invalidtxt text={"This Email is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <div class="w3-hide-small">
                     <h1>Registration</h1>
+
+                    <Invalidtxt text={"This Email is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <form onSubmit={submitHandler}>

@@ -61,7 +61,7 @@ app.post("/register", (req,res)=>{
                 //TODO Registrierung mit Adminaccount
             }
 
-        }else{ res.send("Email wird bereits verwendet");}
+        }else{ res.status(400).send("Email wird bereits verwendet");}
     });
 });
 

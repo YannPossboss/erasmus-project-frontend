@@ -10,7 +10,7 @@ import erasmus from "./pageComponent/ComponentImg/img_avatar2.png";
 import { useCookies } from "react-cookie";
 
 import {useNavigate} from "react-router-dom";
-import { Link } from 'react-router-dom';
+
 
 import axios from 'axios';
 

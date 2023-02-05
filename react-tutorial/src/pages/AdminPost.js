@@ -97,7 +97,7 @@ class AdminPost extends React.Component {
 
                             </div>
 
-                            <div class="w3-center">
+                            <div class="w3-center w3-dropdown-hover">
 
                                 <h8>Choose post country : </h8>
 
@@ -111,7 +111,7 @@ class AdminPost extends React.Component {
                                 </select>
 
                                 <br/>
-
+                                
                             </div>
                             
                             <div>

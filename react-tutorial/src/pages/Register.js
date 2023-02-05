@@ -12,11 +12,15 @@ import Invalidtxt from "./pageComponent/Invalidtxt";
 function Register(props){
     const navigate = useNavigate()
     const [email, setEmail] = useState("");
+    const [username, setUsername] = useState(""); 
     const [password, setPassword] = useState("");
-    const [admin, setAdmin] = useState("");
+    
     const [invalidTEXT, setInvalidTEXT] = useState(false);
     
     
+    function changeHandlerUsername(event){
+        setUsername(event.target.value); 
+    }
 
     function changeHandlerEmail(event){
         setEmail(event.target.value);
@@ -26,17 +30,12 @@ function Register(props){
         setPassword(event.target.value);
     }
 
-    function changeHandlerAdmin(event){
-        setAdmin(event.target.value);
-    }
-    
-
     function submitHandler(event){
         event.preventDefault()
         let data = {
+            username: username,
             email: email,
-            password: password,
-            admin: admin
+            password: password
         }
         axios.post('http://localhost:5000/register', data)
         .then(response =>{
@@ -71,6 +70,12 @@ function Register(props){
                 <form onSubmit={submitHandler}>
 
                     <div class="txt_field">
+                        <input type="text" id="username" name="username" value={username} onChange = {changeHandlerUsername} required/>
+                        <span></span>
+                        <label>Set Username</label>
+                    </div>
+
+                    <div class="txt_field">
                         <input type="text" id="email" name="email" value={email} onChange = {changeHandlerEmail} required/>
                         <span></span>
                         <label>Set Email</label>
@@ -82,18 +87,23 @@ function Register(props){
                         <label>Set Password</label>
                     </div>
 
-                    <div class="text_field">
-                        <label>Admin Account Key*</label>
-                        <input type="text" id="admin" name="admin" value={admin} onChange = {changeHandlerAdmin}/>
+                    <div class="w3-center w3-dropdown-hover">
+
+                                <h8>Choose your country : </h8>
+
+                                <select class="drop w3-center" id="country" name="country">
+                                <option value="spain">Spain</option>
+                                <option value="france">Turkey</option>
+                                <option value="croatia">Romania</option>
+                                <option value="poland">Poland</option>
+                                <option value="germany">Germany</option>
+                                </select>
+                                
                     </div>
 
                     <div class="style2">
                         <input type="submit" value="Register Account"/>
                         <Link to="/login"><input type="submit" value="Cancel"/></Link>
-                    </div>
-
-                    <div class="signup_link">
-                         <h6>fields with * are not required</h6> 
                     </div>
 
                 </form>

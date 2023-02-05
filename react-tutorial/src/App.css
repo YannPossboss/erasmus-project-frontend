@@ -474,10 +474,12 @@ html{
       height: 40px;
       border: 1px solid rgb(22, 22, 22);
       font-size: 20px;
-      color: black;
-      background-color: #eee;
+      font-weight: 600;
+      color: white;
+      background: #38383898;
       border-radius: 5px;
-      box-shadow: 3px 4px rgba(22, 22, 22, 0.336);
+      box-shadow: 2px 3px 3px 3px #8888886c;
+      border-color: white;
       cursor: pointer;
       }
   
@@ -935,6 +937,21 @@ html{
         text-align: center;
         margin: 24px 0 12px 0;
       }
+      .drop {
+        width: 80%;
+        height: 30px;
+        margin-top: 10px;
+        margin-bottom: 10%;
+        border: 1px solid;
+        font-size: 13px;
+        font-weight: 600;
+        color: white;
+        background: #38383898;
+        border-radius: 25px;
+        box-shadow: 2px 3px 3px 3px #8888886c;
+        border-color: white;
+        cursor: pointer;
+        }
     }
     
     /*Drag And Drop CSS file*/

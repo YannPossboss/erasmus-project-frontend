@@ -14,6 +14,7 @@ function Register(props){
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState(""); 
     const [password, setPassword] = useState("");
+    const [country, setCountry] = useState("Spain");
     
     const [invalidTEXT, setInvalidTEXT] = useState(false);
     
@@ -30,12 +31,18 @@ function Register(props){
         setPassword(event.target.value);
     }
 
+    function changeHandlerCountry(event){
+        setCountry(event.target.value);
+    }
+
     function submitHandler(event){
         event.preventDefault()
         let data = {
+            country: country,
             username: username,
             email: email,
-            password: password
+            password: password,
+            admin: ""
         }
         axios.post('http://localhost:5000/register', data)
         .then(response =>{
@@ -58,13 +65,13 @@ function Register(props){
                 <div class=" w3-center w3-hide-large w3-margin-top">
                     <h1>Registration</h1>
 
-                    <Invalidtxt text={"This Email is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                    <Invalidtxt text={"This Email or Username is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <div class="w3-hide-small">
                     <h1>Registration</h1>
 
-                    <Invalidtxt text={"This Email is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                    <Invalidtxt text={"This Email or Username is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <form onSubmit={submitHandler}>
@@ -91,12 +98,12 @@ function Register(props){
 
                                 <h8>Choose your country : </h8>
 
-                                <select class="drop w3-center" id="country" name="country">
-                                <option value="spain">Spain</option>
-                                <option value="france">Turkey</option>
-                                <option value="croatia">Romania</option>
-                                <option value="poland">Poland</option>
-                                <option value="germany">Germany</option>
+                                <select class="drop w3-center" id="country" name="country" onChange={changeHandlerCountry}>
+                                <option value="Spain">Spain</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Romania">Romania</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Germany">Germany</option>
                                 </select>
                                 
                     </div>

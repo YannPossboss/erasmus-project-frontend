@@ -38,18 +38,22 @@ app.post("/register", (req,res)=>{
     db.all("SELECT * FROM users", [], async (err,rows) => {
         if (err) return console.error(err.message);
         let emailIsInUse = false;
+        let usernameIsInUse = false;
         for(let i = 0; i < rows.length; i++){
             if(rows.at(i).email === req.body.email){
                 emailIsInUse = true;
             }
+            if(rows.at(i).username === req.body.username){
+                usernameIsInUse = true;
+            }
         }
         
-        if(emailIsInUse === false){
+        if(emailIsInUse === false && usernameIsInUse === false){
             const salt = await bcrypt.genSalt(10);
             const hashPassword = await bcrypt.hash(req.body.password, salt)
 
             if(req.body.admin === ""){
-            db.run("INSERT INTO users(email,password,country,admin) VALUES (?,?,?,?)", [req.body.email,hashPassword,"deutschland",false], (err) => {
+            db.run("INSERT INTO users(email,password,country,admin,username) VALUES (?,?,?,?,?)", [req.body.email,hashPassword,req.body.country,false,req.body.username], (err) => {
                 if (err){
                     return console.error(err.message);
                 }else{
@@ -61,22 +65,22 @@ app.post("/register", (req,res)=>{
                 //TODO Registrierung mit Adminaccount
             }
 
-        }else{ res.status(400).send("Email wird bereits verwendet");}
+        }else{ res.status(400).send("Email oder Username wird bereits verwendet");}
     });
 });
 
 //Login
 app.post("/login", (req,res) => {
     db.all("SELECT * FROM users", [], async (err,rows) => {
-        let emailExist = false;
+        let emailOrUsernameExist = false;
         let dataset;
         for(let i = 0; i < rows.length; i++){
-            if(req.body.email == rows.at(i).email){
-                emailExist = true;
+            if(req.body.emailOrUsername == rows.at(i).email || req.body.emailOrUsername == rows.at(i).username){
+                emailOrUsernameExist = true;
                 dataset = rows.at(i);
             }
         }
-        if(emailExist === false){ return res.status(400).send("Invalid Email");  }
+        if(emailOrUsernameExist === false){ return res.status(400).send("Invalid Email or Username");  }
         const validPass = await bcrypt.compare(req.body.password, dataset.password);
         if(!validPass) {return res.status(400).send("Invalid Password"); }
         

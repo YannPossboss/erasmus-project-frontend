@@ -47,7 +47,7 @@ function Login(props){
     function submitHandler(event){
         event.preventDefault()
         let data = {
-            email: email,
+            emailOrUsername: email,
             password: password
         }
         axios.post('http://localhost:5000/login', data)
@@ -89,7 +89,7 @@ function Login(props){
                     <div class="txt_field">
                         <input type="text" id="email" name="email" value={email} onChange = {changeHandlerEmail} required/>
                         <span></span>
-                        <label>Enter Email</label>
+                        <label>Enter Email or Username</label>
                     </div>
 
                     <div class="txt_field">

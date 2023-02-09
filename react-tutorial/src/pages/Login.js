@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import Footer from "./pageComponent/Footer"; 
 
-import erasmus from "./logo/img_avatar2.png"
+import erasmus from "./logo/img_avatar2.png";
 
 import {useNavigate} from "react-router-dom";
 
@@ -72,17 +72,17 @@ function Login(props){
 
             <div class="center">
 
-            <div class=" w3-center w3-hide-large w3-margin-top">
-                <h1>Login</h1>
+                <div class=" w3-center w3-hide-large w3-margin-top">
+                    <h1>Login</h1>
 
-                <Invalidtxt text={"EMAIL or PASSWORD is wrong"} invalidTEXT={invalidTEXT}></Invalidtxt>
-            </div>
+                    <Invalidtxt text={"EMAIL or PASSWORD is wrong"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                </div>
 
-            <div class="w3-hide-small">
-                <h1>Login</h1>
+                <div class="w3-hide-small">
+                    <h1>Login</h1>
 
-                <Invalidtxt text={"EMAIL or PASSWORD is wrong"} invalidTEXT={invalidTEXT}></Invalidtxt>
-            </div>
+                    <Invalidtxt text={"EMAIL or PASSWORD is wrong"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                </div>
 
                 <form onSubmit={submitHandler}>
 

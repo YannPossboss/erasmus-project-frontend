@@ -59,7 +59,7 @@ function Navigation(props){
                 </div>
 
                 <div class="w3-hide-middle w3-hide-large">
-                    <Link to="/login"><input type="submitNavi" value="Create new Recipe +"/></Link>
+                    <Link to="/login" onClick={LoginTest}><input type="submitNavi" value="Create new Recipe +"/></Link>
                     <Link to="/recipe"><input type="submitNavi" value="Show me some Recipes !"/></Link>
                 </div>
                 <Footer></Footer>

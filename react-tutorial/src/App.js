@@ -7,8 +7,8 @@ import FrgtPass from './pages/FrgtPass';
 import Navigation from './pages/Navigation';
 import Landing from './pages/Landing';
 import ProfileEdit from './pages/ProfileEdit';
-import AdminPost from './pages/AdminPost';
 import RecipeTempl from './pages/RecipeTempl';
+import Create from "./pages/Create";
 
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
@@ -32,7 +32,7 @@ function App() {
           <Route path = "/frgtpass" element={<FrgtPass/>}/>
           <Route path = "/login" element={<Login/>}/>
           <Route path = "/editp" element={<ProfileEdit/>}/>
-          <Route path = "/create" element={<AdminPost/>}/>
+          <Route path = "/create" element={<Create/>}/>
           <Route path = "/recipe" element={<RecipeTempl/>}/>
         </Routes>
       </Router>

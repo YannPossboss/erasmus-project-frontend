@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 import Footer from "./pageComponent/Footer"; 
 import ButtonLogout from "./pageComponent/ButtonLogout";
@@ -9,6 +11,14 @@ import ButtonProfile from "./pageComponent/ButtonProfile";
 import erasmus from "./logo/img_avatar2.png"
 
 function Create(props){
+    const navigate = useNavigate()
+    const [cookies, removeCookie] = useCookies(['name']);
+
+    function logout(event){
+        event.preventDefault();
+        removeCookie("token");
+        navigate("/");
+    }
 
     return(
         <div>
@@ -16,10 +26,10 @@ function Create(props){
             <div class="w3-top recipeHeader w3-bar w3-theme1 Buttonfix">
                      
                      <img src={erasmus} alt="Avatar" class="avatar w3-left w3-margin"/>
-                     <ButtonLogout w3classprops={"w3-center w3-hide-small w3-margin"} typeCustom={"button"} ></ButtonLogout>
+                     <ButtonLogout w3classprops={"w3-center w3-hide-small w3-margin"} typeCustom={"button"} logout={logout} ></ButtonLogout>
                      <ButtonProfile w3classprops={"w3-center w3-hide-small w3-margin"} typeCustom={"button"}></ButtonProfile>
  
-                     <ButtonLogout w3classprops={"w3-center w3-hide-large w3-margin-top"} typeCustom={"reset"} ></ButtonLogout>
+                     <ButtonLogout w3classprops={"w3-center w3-hide-large w3-margin-top"} typeCustom={"reset"} logout={logout} ></ButtonLogout>
                      <ButtonProfile w3classprops={"w3-center w3-hide-large w3-margin-top"} typeCustom={"reset"} ></ButtonProfile>
             </div>
 

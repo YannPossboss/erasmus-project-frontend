@@ -1,11 +1,23 @@
 import React from "react";
 
-import food from "./ComponentImg/fabada.jpg"
-import flag from "./ComponentImg/flag_s_s.png"
+import food from "./ComponentImg/example.png"
+
+import flagS from "./ComponentImg/flag_s_s.png"
+import flagT from "./ComponentImg/flag_turkei.png"
+import flagG from "./ComponentImg/deutschlandflagge.png"
+import flagP from "./ComponentImg/Flag_Poland.png"
+import flagR from "./ComponentImg/Flag_Romania.svg.png"
 
 function ContentBox(props){
-
+    let flag;
     if(props.recipeContent.test){   
+        if(props.recipeContent.country === "Spain") { flag = flagS; }
+        if(props.recipeContent.country === "Turkey") { flag = flagT; }
+        if(props.recipeContent.country === "Germany") { flag = flagG; }
+        if(props.recipeContent.country === "Poland") { flag = flagP; }
+        if(props.recipeContent.country === "Romania") { flag = flagR; }
+
+
     return(
 
         <div class="contentboxl">   

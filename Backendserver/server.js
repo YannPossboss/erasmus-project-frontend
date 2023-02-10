@@ -142,9 +142,10 @@ app.post("/secured/create", (req,res) =>{
                 [req.body.name,req.body.country,req.body.recipetime,req.body.describtion,req.body.task1,req.body.task2,req.body.task3,req.body.task4,req.body.task5,req.body.task6,req.body.task7,req.body.task8,req.body.task9,req.body.task10,req.body.ingredient1,req.body.ingredient2,req.body.ingredient3,req.body.ingredient4,req.body.ingredient5,req.body.ingredient6,req.body.ingredient7,req.body.ingredient8,req.body.ingredient9,req.body.ingredient10,req.body.ingredient11,req.body.ingredient12,req.body.ingredient13,req.body.ingredient14,req.body.ingredient15,req.body.ingredient16,req.body.ingredient17,req.body.ingredient18,req.body.ingredient19,req.body.ingredient20], 
                 (err) => {
             if (err){
+                res.status(400).send("Upload fehlgeschlagen")
                 return console.error(err.message);
             }else{
-                res.send("Registrierung war erfolgreich");
+                res.send("Upload war erfolgreich");
                 console.log("Debuginfo: Rezept gespeichert");
             }
           });

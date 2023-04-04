@@ -4,6 +4,7 @@ import Footer from "./pageComponent/Footer";
 import ContentBox from "./pageComponent/ContentBox";
 import ButtonProfile from "./pageComponent/ButtonProfile";
 import ButtonLogout from "./pageComponent/ButtonLogout.js";
+import Search from "./pageComponent/Search.js";
  
 import erasmus from "./pageComponent/ComponentImg/img_avatar2.png"; 
 
@@ -87,14 +88,17 @@ function RecipeTempl(props){
                         <div class="w3-bar w3-theme1" id="myNavbar">
 
                             <div class="Buttonfix">
-                                <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-small" />
- 
+                                
                                 <ButtonLogout logout={logout} w3classprops={"w3-center w3-hide-small"} typeCustom={"button"} ></ButtonLogout>
                                 <ButtonProfile w3classprops={"w3-center w3-hide-small"} typeCustom={"button"} ></ButtonProfile>
                                 
+                                <Search w3classprops={"w3-hide-small w3-right"}></Search>
+
                                 <input type="button" class="w3-center w3-hide-small" value=" ➡ " onClick={onClickHandlerRight}></input>
                                 <input type="button" class="w3-center w3-hide-small" value=" ⬅ " onClick={onClickHandlerLeft}></input>
                                     
+                                <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-small" />
+
                                 <div class="w3-hide-large ">
                                     <img src={erasmus} alt="ImgNotFound" class="avatar w3-bar w3-margin w3-hide-large" />
 
@@ -104,7 +108,10 @@ function RecipeTempl(props){
                                     <div>
                                         <input type="reset" class="w3-center w3-hide-large w3-right w3-margin-right w3-margin-bottom"value="Next"  onClick={onClickHandlerRight}></input>
                                         <input type="reset" class="w3-center w3-hide-large w3-left w3-margin-left" value="Back" onClick={onClickHandlerLeft}></input>
+                                        <Search w3classprops={"w3-right"}></Search>
                                     </div>
+
+                                    
 
                                 </div>
 

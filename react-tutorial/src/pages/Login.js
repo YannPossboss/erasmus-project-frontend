@@ -26,7 +26,7 @@ function Login(props){
 
 
     //Wenn du eingeloggt bist, wirst du direkt zur Navigation page weitergeleitet
-    axios.post("http://localhost:5000/secured/user", {token: cookies.token})
+    axios.post("http://10.142.242.78:5000/secured/user", {token: cookies.token})
     .then(response =>{
         console.log(response)
         //Das passiert hier
@@ -50,7 +50,7 @@ function Login(props){
             emailOrUsername: email,
             password: password
         }
-        axios.post('http://localhost:5000/login', data)
+        axios.post('http://10.142.242.78:5000/login', data)
         .then(response =>{
             console.log(response)
             removeCookie("token");

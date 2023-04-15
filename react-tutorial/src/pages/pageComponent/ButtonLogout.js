@@ -10,7 +10,7 @@ function ButtonLogout(props){
     
     const [cookies] = useCookies(['name']);
 
-    axios.post("http://localhost:5000/secured/user", {token: cookies.token})
+    axios.post("http://10.142.242.78:5000/secured/user", {token: cookies.token})
     .then(response =>{
         setText("Logout");
     })

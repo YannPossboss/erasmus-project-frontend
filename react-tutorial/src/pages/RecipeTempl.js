@@ -26,7 +26,7 @@ function RecipeTempl(props){
 
     if(recipeShowNumberUpdate != recipeShowNumber){
         setRecipeShowNumberUpdate(recipeShowNumber);
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber})
+        axios.post('http://10.142.242.78:5000/recipe', {recipeId: recipeShowNumber})
             .then(response =>{
                 console.log(response)
                 setRecipeContent1(response.data)
@@ -35,7 +35,7 @@ function RecipeTempl(props){
                 console.log(error) 
             })
 
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 1})
+        axios.post('http://10.142.242.78:5000/recipe', {recipeId: recipeShowNumber + 1})
         .then(response =>{
             console.log(response)
             setRecipeContent2(response.data)
@@ -44,7 +44,7 @@ function RecipeTempl(props){
             console.log(error) 
         })
 
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 2})
+        axios.post('http://10.142.242.78:5000/recipe', {recipeId: recipeShowNumber + 2})
         .then(response =>{
             console.log(response)
             setRecipeContent3(response.data)

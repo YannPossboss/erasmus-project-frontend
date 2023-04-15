@@ -16,4 +16,4 @@ const db = new sqlite3.Database("database/mock.db", sqlite3.OPEN_READWRITE, (err
 //sql = "CREATE TABLE users(id INTEGER PRIMARY KEY,email,password,country,admin,username)";
 //db.run(sql);
 
-db.run("DELETE FROM recipes WHERE id=(2)")
+db.run("UPDATE recipes SET country = (?) WHERE id = 2", ["Spain"])

@@ -1,5 +1,14 @@
 import React from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHourglass } from '@fortawesome/free-solid-svg-icons'
+import { faSeedling } from '@fortawesome/free-solid-svg-icons'
+import { faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faList } from '@fortawesome/free-solid-svg-icons'
+import { faChartSimple } from '@fortawesome/free-solid-svg-icons'
+import { faAllergies } from '@fortawesome/free-solid-svg-icons'
+
+
 import food from "./ComponentImg/example.png"
 
 import flagS from "./ComponentImg/flag_s_s.png"
@@ -32,10 +41,12 @@ function ContentBox(props){
 
                     <br/>
                     <br/>
+                    <h3>Vegetarian <FontAwesomeIcon icon={faSeedling}/></h3>
+                    
                     <br/>
                     <h3>Region: &nbsp; &nbsp;<a href="https://shorturl.at/inrZ0">{props.recipeContent.country}</a></h3>
                     <br/>
-                    <h3>Time:   &nbsp; &nbsp; &nbsp; {props.recipeContent.recipetime} ⏱️</h3>
+                    <h3>Time:   &nbsp; &nbsp; &nbsp; {props.recipeContent.recipetime} <FontAwesomeIcon icon={faHourglass}/> <FontAwesomeIcon icon={faUtensils}/></h3>
                     <br/>
                 </div>
 
@@ -48,7 +59,7 @@ function ContentBox(props){
                 </div>
                 
                 <div class="contentboxtextl">
-                    <h2>Method: </h2>
+                    <h2><FontAwesomeIcon icon={faChartSimple}/> Method: </h2>
                     <hr></hr>
                     <h4>{props.recipeContent.task1}</h4>
                     <h4>{props.recipeContent.task2}</h4>
@@ -63,7 +74,7 @@ function ContentBox(props){
                 </div>
 
                 <div class="contentboxtextl">
-                    <h2>Ingredients: </h2>
+                    <h2><FontAwesomeIcon icon={faList}/> Ingredients: </h2>
                     <hr></hr>
                     <h4>{props.recipeContent.ingredient1}</h4>
                     <h4>{props.recipeContent.ingredient2}</h4>
@@ -87,7 +98,15 @@ function ContentBox(props){
                     <h4>{props.recipeContent.ingredient20}</h4>
                 </div>
                 
-                
+                <div class="contentboxtextl">
+                    <h2><FontAwesomeIcon icon={faAllergies}/> Allergenes</h2>
+                    <hr></hr>
+                    <h4>This Recipe contains:</h4>
+                    <hr></hr>
+                    <h4>- Eggs</h4>
+                    <h4>- Soy</h4>
+                    <h4>- Sesame seeds</h4>
+                </div>
 
             </div>
 

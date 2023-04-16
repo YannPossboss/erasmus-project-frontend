@@ -4,6 +4,12 @@ import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import { useCookies } from "react-cookie";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHourglass } from '@fortawesome/free-solid-svg-icons'
+import { faSeedling } from '@fortawesome/free-solid-svg-icons'
+import { faLeaf } from '@fortawesome/free-solid-svg-icons'
+import { faAppleAlt } from '@fortawesome/free-solid-svg-icons'
+
 import Footer from "./pageComponent/Footer"; 
 import ButtonLogout from "./pageComponent/ButtonLogout";
 import ButtonProfile from "./pageComponent/ButtonProfile";
@@ -137,10 +143,16 @@ function Create(props){
                                 
                         </div>
 
+                        <div>
+                            <h7>↓ Select Recipe Picture ↓</h7>
+                            <input type="file" accept=".jpg, .jpeg, .png"></input>
+                            <h7>↑ Click above, Format (.jpg .jpeg .png) ↑</h7>
+                        </div>
+
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerRecipetime} required/>
                             <span></span>
-                            <label>Preparation Time</label>
+                            <label>Preparation Time <FontAwesomeIcon icon={faHourglass}/> </label>
                         </div>
 
                         <textarea placeholder="A brief description of the Recipe:" onChange={changeHandlerDescribtion} required></textarea>
@@ -333,6 +345,65 @@ function Create(props){
                             <label >Ingredient 20: </label>
                         </div>
 
+                        <div class="checkboxall">
+                         
+                        <br/>
+
+                        <div class="w3-center"><h8>This Recipe is</h8><hr/></div>
+                    
+                            <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                            <label for="alergene1"> Vegetarian <FontAwesomeIcon icon={faSeedling}/></label>
+
+                            <br/>
+
+                            <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                            <label for="alergene1"> Vegan <FontAwesomeIcon icon={faLeaf}/> <FontAwesomeIcon icon={faAppleAlt}/></label>
+                            <br/>
+                            <br/>
+
+                        <div class="w3-center"><h8>Containing Allergenes</h8><hr/></div>
+
+                            <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                            <label for="alergene1"> Grain containing gluten</label>
+                            <br/>
+                            <input type="checkbox" id="alergene2" name="alergene2" value="2"></input>
+                            <label for="alergene2"> Crustaceans</label>
+                            <br/>
+                            <input type="checkbox" id="alergene3" name="alergene3" value="3"></input>
+                            <label for="alergene3"> Eggs</label>
+                            <br/>
+                            <input type="checkbox" id="alergene4" name="alergene4" value="4"></input>
+                            <label for="alergene4"> Fish</label>
+                            <br/>
+                            <input type="checkbox" id="alergene5" name="alergene5" value="5"></input>
+                            <label for="alergene5"> Peanuts</label>
+                            <br/>
+                            <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
+                            <label for="alergene6"> Soy</label>
+                            <br/>
+                            <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
+                            <label for="alergene6"> Milk</label>
+                            <br/>
+                            <input type="checkbox" id="alergene7" name="alergene7" value="7"></input>
+                            <label for="alergene7"> Shell fruits</label>
+                            <br/>
+                            <input type="checkbox" id="alergene8" name="alergene8" value="8"></input>
+                            <label for="alergene8"> Celery</label>
+                            <br/>
+                            <input type="checkbox" id="alergene9" name="alergene9" value="9"></input>
+                            <label for="alergene9"> Mustard</label>
+                            <br/>
+                            <input type="checkbox" id="alergene10" name="alergene10" value="10"></input>
+                            <label for="alergene10"> Sesame seeds</label>
+                            <br/>
+                            <input type="checkbox" id="alergene11" name="alergene11" value="11"></input>
+                            <label for="alergene11"> Lupine</label>
+                            <br/>
+                            <input type="checkbox" id="alergene12" name="alergene12" value="12"></input>
+                            <label for="alergene12"> Molluscs</label>
+
+                        </div>
+
                         <div class="style2">
                             <input type="submit" value="+ Upload to server"></input>
                             <Link to="/navigation"><input type="submit" value="Cancel"></input></Link>
@@ -371,10 +442,15 @@ function Create(props){
                                 
                         </div>
 
+                        <div>
+                            <input class="customFileInput" type="file" accept=".jpg, .jpeg, .png"></input>
+                            <h7>↑ Drag & Drop or Click above ↑</h7>
+                        </div>
+
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerRecipetime} required/>
                             <span></span>
-                            <label>Preparation Time</label>
+                            <label>Preparation Time <FontAwesomeIcon icon={faHourglass}/></label>
                         </div>
 
                         <textarea placeholder="A brief description of the Recipe:" onChange={changeHandlerDescribtion} required></textarea>
@@ -441,6 +517,67 @@ function Create(props){
                             <label >Task 10: </label>
                         </div>
 
+                        <h8>This Recipe is:</h8>
+                        <br/>
+                        <br/>
+
+                        <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                        <label for="alergene1"> Vegetarian <FontAwesomeIcon icon={faSeedling}/></label>
+
+                        <br/>
+
+                        <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                        <label for="alergene1"> Vegan <FontAwesomeIcon icon={faLeaf}/> <FontAwesomeIcon icon={faAppleAlt}/></label>
+
+                        <br/>
+                        <br/> 
+
+                        <h8>Containing Allergenes:</h8>
+                        <br/>
+                        <br/>
+
+                        <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                        <label for="alergene1"> Grain containing gluten, </label>
+
+                        <input type="checkbox" id="alergene2" name="alergene2" value="2"></input>
+                        <label for="alergene2"> Crustaceans, </label>
+
+                        <input type="checkbox" id="alergene3" name="alergene3" value="3"></input>
+                        <label for="alergene3"> Eggs, </label>
+
+                        <input type="checkbox" id="alergene4" name="alergene4" value="4"></input>
+                        <label for="alergene4"> Fish, </label>
+
+                        <input type="checkbox" id="alergene5" name="alergene5" value="5"></input>
+                        <label for="alergene5"> Peanuts, </label>
+
+                        <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
+                        <label for="alergene6"> Soy </label>
+
+                        <br/>
+                        <br/>
+
+                        <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
+                        <label for="alergene6"> Milk, </label>
+
+                        <input type="checkbox" id="alergene7" name="alergene7" value="7"></input>
+                        <label for="alergene7"> Shell fruits, </label>
+
+                        <input type="checkbox" id="alergene8" name="alergene8" value="8"></input>
+                        <label for="alergene8"> Celery, </label>
+
+                        <input type="checkbox" id="alergene9" name="alergene9" value="9"></input>
+                        <label for="alergene9"> Mustard, </label>
+
+                        <input type="checkbox" id="alergene10" name="alergene10" value="10"></input>
+                        <label for="alergene10"> Sesame seeds, </label>
+
+                        <input type="checkbox" id="alergene11" name="alergene11" value="11"></input>
+                        <label for="alergene11"> Lupine, </label>
+                        
+                        <input type="checkbox" id="alergene12" name="alergene12" value="12"></input>
+                        <label for="alergene12"> Molluscs </label>
+
                         <div class="w3-margin-bottom">
                             <br></br>
                         </div>
@@ -450,6 +587,19 @@ function Create(props){
                             <Link to="/navigation"><input type="submit" value="Cancel"></input></Link>
                         </div>
                     </div>
+
+                    <div class="w3-margin-bottom">
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </div>
 
                     <div class="w3-right">
                         
@@ -578,6 +728,13 @@ function Create(props){
                         <div class="w3-margin-bottom">
                             <br></br>
                             <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+ 
                         </div>
 
                     </div>

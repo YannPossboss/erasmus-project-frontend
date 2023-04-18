@@ -44,7 +44,7 @@ function Register(props){
             password: password,
             admin: ""
         }
-        axios.post('http://10.142.242.78:5000/register', data)
+        axios.post('http://localhost:5000/register', data)
         .then(response =>{
             console.log(response)
             navigate("/login")

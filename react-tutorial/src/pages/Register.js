@@ -14,6 +14,7 @@ function Register(props){
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState(""); 
     const [password, setPassword] = useState("");
+    const [admin, setAdmin] = useState("");
     const [country, setCountry] = useState("Spain");
     
     const [invalidTEXT, setInvalidTEXT] = useState(false);
@@ -31,6 +32,10 @@ function Register(props){
         setPassword(event.target.value);
     }
 
+    function changeHandlerAdmin(event){
+        setAdmin(event.target.value);
+    }
+
     function changeHandlerCountry(event){
         setCountry(event.target.value);
     }
@@ -42,7 +47,7 @@ function Register(props){
             username: username,
             email: email,
             password: password,
-            admin: ""
+            admin: admin
         }
         axios.post('http://10.142.242.78:5000/register', data)
         .then(response =>{
@@ -58,11 +63,11 @@ function Register(props){
     return(
         <div>   
             
-            <img src={erasmus} alt="Avatar" class="avatar w3-right w3-hide-middle w3-hide-small"/>
+            <img src={erasmus} alt="Avatar" class="avatar w3-right w3-hide-medium w3-hide-small"/>
 
             <div class="center">
 
-                <div class=" w3-center w3-hide-large w3-margin-top">
+                <div class=" w3-center w3-hide-large w3-hide-medium w3-margin-top">
                     <h1>Registration</h1>
 
                     <Invalidtxt text={"This Email or Username is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
@@ -92,6 +97,12 @@ function Register(props){
                         <input type="password" id="password" name="password" value={password} onChange = {changeHandlerPassword} required/>
                         <span></span>
                         <label>Set Password</label>
+                    </div>
+
+                    <div class="txt_field">
+                        <input type="text" id="admin" name="admin" value={admin} onChange = {changeHandlerAdmin} required/>
+                        <span></span>
+                        <label>Enter Verification Code</label>
                     </div>
 
                     <div class="w3-center w3-dropdown-hover">

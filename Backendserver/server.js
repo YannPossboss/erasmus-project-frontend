@@ -52,18 +52,29 @@ app.post("/register", (req,res)=>{
             const salt = await bcrypt.genSalt(10);
             const hashPassword = await bcrypt.hash(req.body.password, salt)
 
-            if(req.body.admin === ""){
-            db.run("INSERT INTO users(email,password,country,admin,username) VALUES (?,?,?,?,?)", [req.body.email,hashPassword,req.body.country,false,req.body.username], (err) => {
-                if (err){
-                    return console.error(err.message);
-                }else{
-                    res.send("Registrierung war erfolgreich");
-                    console.log("Debuginfo: Registrierung erfolgreich");
+            db.all("SELECT * FROM verification", [], async (err,rows) => {
+                if (err) return console.error(err.message);
+                let admincodeTrue = false; 
+                for(let i = 0; i < rows.length; i++){
+                    if(rows.at(i).code == req.body.admin && rows.at(i).gültig == true){
+                        admincodeTrue = true;
+                        db.run("UPDATE verification SET gültig = false WHERE id = ?", [rows.at(i).id]);
+                    }
                 }
-              });
-            }else if(req.body.admin !== ""){
-                //TODO Registrierung mit Adminaccount
-            }
+
+                if(admincodeTrue){
+                db.run("INSERT INTO users(email,password,country,admin,username) VALUES (?,?,?,?,?)", [req.body.email,hashPassword,req.body.country,true,req.body.username], (err) => {
+                    if (err){
+                        return console.error(err.message);
+                    }else{
+                        res.send("Registrierung war erfolgreich");
+                        console.log("Debuginfo: Registrierung erfolgreich");
+                    }
+                });
+                }else{
+                    res.status(400).send("Verifizierungscode ist fehlerhaft.");
+                }
+            });
 
         }else{ res.status(400).send("Email oder Username wird bereits verwendet");}
     });

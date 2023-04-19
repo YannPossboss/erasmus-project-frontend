@@ -49,7 +49,7 @@ function Register(props){
             password: password,
             admin: admin
         }
-        axios.post('http://10.142.242.78:5000/register', data)
+        axios.post('http://localhost:5000/register', data)
         .then(response =>{
             console.log(response)
             navigate("/login")
@@ -70,13 +70,13 @@ function Register(props){
                 <div class=" w3-center w3-hide-large w3-hide-medium w3-margin-top">
                     <h1>Registration</h1>
 
-                    <Invalidtxt text={"This Email or Username is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                    <Invalidtxt text={"This Email or Username is allready in use or check your verificationcode"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <div class="w3-hide-small">
                     <h1>Registration</h1>
 
-                    <Invalidtxt text={"This Email or Username is allready in use"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                    <Invalidtxt text={"This Email or Username is allready in use or check your verificationcode"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <form onSubmit={submitHandler}>

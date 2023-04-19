@@ -25,9 +25,14 @@ function RecipeTempl(props){
     const [recipeContent2, setRecipeContent2] = useState({});
     const [recipeContent3, setRecipeContent3] = useState({});
 
-    if(recipeShowNumberUpdate != recipeShowNumber){
+    const [searchText, setSearchText] = useState("");
+    const [updatedSearchText, setUpdatedSearchText] = useState("");
+    const [SearchTextUpdate, setSearchTextUpdate] = useState("");
+
+    if(recipeShowNumberUpdate != recipeShowNumber || SearchTextUpdate != updatedSearchText){
         setRecipeShowNumberUpdate(recipeShowNumber);
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber})
+        setSearchTextUpdate(updatedSearchText);
+        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber, search: updatedSearchText})
             .then(response =>{
                 console.log(response)
                 setRecipeContent1(response.data)
@@ -36,7 +41,7 @@ function RecipeTempl(props){
                 console.log(error) 
             })
 
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 1})
+        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 1, search: updatedSearchText})
         .then(response =>{
             console.log(response)
             setRecipeContent2(response.data)
@@ -45,7 +50,7 @@ function RecipeTempl(props){
             console.log(error) 
         })
 
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 2})
+        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 2, search: updatedSearchText})
         .then(response =>{
             console.log(response)
             setRecipeContent3(response.data)
@@ -59,7 +64,7 @@ function RecipeTempl(props){
     function onClickHandlerRight(event){
         event.preventDefault();
         if(recipeContent1.length + 2 > recipeShowNumber + 2){
-            setRecipeShowNumber(recipeShowNumber + 1)
+            setRecipeShowNumber(recipeShowNumber + 1);
             console.log(recipeShowNumber);
         }
     }
@@ -67,7 +72,7 @@ function RecipeTempl(props){
     function onClickHandlerLeft(event){
         event.preventDefault();
         if(recipeShowNumber > 1){
-            setRecipeShowNumber(recipeShowNumber - 1)
+            setRecipeShowNumber(recipeShowNumber - 1);
         }
         console.log(recipeShowNumber);
     }
@@ -77,6 +82,18 @@ function RecipeTempl(props){
         removeCookie("token");
         navigate("/");
     }
+
+    function searchButton(event){
+        event.preventDefault();
+        setUpdatedSearchText(searchText);
+        setRecipeShowNumber(1);
+    }
+
+    function searchOnChange(event){
+        event.preventDefault();
+        setSearchText(event.target.value);
+    }
+
 
     return(
         <div >
@@ -92,7 +109,7 @@ function RecipeTempl(props){
                                 <ButtonLogout logout={logout} w3classprops={"w3-center w3-hide-small"} typeCustom={"button"} ></ButtonLogout>
                                 <ButtonProfile w3classprops={"w3-center w3-hide-small"} typeCustom={"button"} ></ButtonProfile>
                                 
-                                <Search w3classprops={"w3-hide-small w3-right"}></Search>
+                                <Search w3classprops={"w3-hide-small w3-right"} searchButton={searchButton} searchOnChange={searchOnChange} searchText={searchText}></Search>
 
                                 <input type="button" class="w3-center w3-hide-small" value=" ➡ " onClick={onClickHandlerRight}></input>
                                 <input type="button" class="w3-center w3-hide-small" value=" ⬅ " onClick={onClickHandlerLeft}></input>

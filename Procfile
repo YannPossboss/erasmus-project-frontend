@@ -1,1 +1,1 @@
-web: npm start
+web: PORT=16303 react-scripts start

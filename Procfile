@@ -1,1 +1,1 @@
-web: PORT=16303 react-scripts start
+web: PORT=16303 serve -s build

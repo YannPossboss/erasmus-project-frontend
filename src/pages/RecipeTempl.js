@@ -32,7 +32,7 @@ function RecipeTempl(props){
     if(recipeShowNumberUpdate != recipeShowNumber || SearchTextUpdate != updatedSearchText){
         setRecipeShowNumberUpdate(recipeShowNumber);
         setSearchTextUpdate(updatedSearchText);
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber, search: updatedSearchText})
+        axios.post('https://erasmus-recipes-backend.herokuapp.com/recipe', {recipeId: recipeShowNumber, search: updatedSearchText})
             .then(response =>{
                 console.log(response)
                 setRecipeContent1(response.data)
@@ -41,7 +41,7 @@ function RecipeTempl(props){
                 console.log(error) 
             })
 
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 1, search: updatedSearchText})
+        axios.post('https://erasmus-recipes-backend.herokuapp.com/recipe', {recipeId: recipeShowNumber + 1, search: updatedSearchText})
         .then(response =>{
             console.log(response)
             setRecipeContent2(response.data)
@@ -50,7 +50,7 @@ function RecipeTempl(props){
             console.log(error) 
         })
 
-        axios.post('http://localhost:5000/recipe', {recipeId: recipeShowNumber + 2, search: updatedSearchText})
+        axios.post('https://erasmus-recipes-backend.herokuapp.com/recipe', {recipeId: recipeShowNumber + 2, search: updatedSearchText})
         .then(response =>{
             console.log(response)
             setRecipeContent3(response.data)

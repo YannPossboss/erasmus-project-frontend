@@ -91,7 +91,7 @@ function Create(props){
 
     function submit(event){
         event.preventDefault();
-        axios.post("https://erasmus-recipes-backend.herokuapp.com/secured/create", {...recipeContent, token: cookies.token})
+        axios.post("http://erasmus-recipes-backend.herokuapp.com/secured/create", {...recipeContent, token: cookies.token})
         .then(response =>{
             navigate("/navigation");
         })

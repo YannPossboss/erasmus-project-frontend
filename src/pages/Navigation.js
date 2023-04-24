@@ -18,7 +18,7 @@ function Navigation(props){
     
     function LoginTest(event){
         event.preventDefault();
-        axios.post("https://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
+        axios.post("http://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
         .then(response =>{
             console.log(response)
             navigate("/create");

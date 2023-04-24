@@ -49,7 +49,7 @@ function Register(props){
             password: password,
             admin: admin
         }
-        axios.post('https://erasmus-recipes-backend.herokuapp.com/register', data)
+        axios.post('http://erasmus-recipes-backend.herokuapp.com/register', data)
         .then(response =>{
             console.log(response)
             navigate("/login")

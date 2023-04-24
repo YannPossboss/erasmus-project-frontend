@@ -10,7 +10,7 @@ function ButtonProfile(props){
     const [logedin, setLogedin ] = useState(true)
     const [cookies] = useCookies(['name']);
 
-    axios.post("https://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
+    axios.post("http://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
     .then(response =>{
         setLogedin(true);
     })

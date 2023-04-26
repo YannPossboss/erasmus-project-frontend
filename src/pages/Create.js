@@ -21,7 +21,7 @@ function Create(props){
     const [cookies, removeCookie] = useCookies(['name']);
     
     const [recipeContent, setRecipeContent] = useState({
-        "name":"", "country":"Spain", "recipetime": "", "describtion":"", 
+        "name":"", "country":"Spain","veg":"none", "recipetime": "", "describtion":"", 
         "task1":"",
         "task2": "",
         "task3": "",
@@ -56,6 +56,7 @@ function Create(props){
 
     function changeHandlerName(event) { setRecipeContent( {...recipeContent, name:event.target.value}); }
     function changeHandlerCountry(event) { setRecipeContent( {...recipeContent, country:event.target.value}); }
+    function changeHandlerVeg(event) {setRecipeContent({...recipeContent,veg:event.target.value});}
     function changeHandlerRecipetime(event) { setRecipeContent( {...recipeContent, recipetime:event.target.value}); }   
     function changeHandlerDescribtion(event) { setRecipeContent( {...recipeContent, describtion:event.target.value}); } 
     function changeHandlerTask1(event) { setRecipeContent( {...recipeContent, task1:event.target.value}); }
@@ -141,12 +142,6 @@ function Create(props){
                                 <option value="Germany">Germany</option>
                                 </select>
                                 
-                        </div>
-
-                        <div>
-                            <h7>↓ Select Recipe Picture ↓</h7>
-                            <input type="file" accept=".jpg, .jpeg, .png"></input>
-                            <h7>↑ Click above, Format (.jpg .jpeg .png) ↑</h7>
                         </div>
 
                         <div class="txt_field">
@@ -345,21 +340,20 @@ function Create(props){
                             <label >Ingredient 20: </label>
                         </div>
 
+                        <div class="w3-center txt_field w3-margin-left w3-dropdown-hover">
+
+                            <h8>This recipe is</h8>
+
+                            <select class="drop w3-center" id="veg" name="veg" onChange={changeHandlerVeg} required>
+                            <option value="none">None</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Vegan">Vegan</option>
+
+                            </select>
+
+                        </div>
+
                         <div class="checkboxall">
-                         
-                        <br/>
-
-                        <div class="w3-center"><h8>This Recipe is</h8><hr/></div>
-                    
-                            <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
-                            <label for="alergene1"> Vegetarian <FontAwesomeIcon icon={faSeedling}/></label>
-
-                            <br/>
-
-                            <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
-                            <label for="alergene1"> Vegan <FontAwesomeIcon icon={faLeaf}/> <FontAwesomeIcon icon={faAppleAlt}/></label>
-                            <br/>
-                            <br/>
 
                         <div class="w3-center"><h8>Containing Allergenes</h8><hr/></div>
 
@@ -442,11 +436,6 @@ function Create(props){
                                 
                         </div>
 
-                        <div>
-                            <input class="customFileInput" type="file" accept=".jpg, .jpeg, .png"></input>
-                            <h7>↑ Drag & Drop or Click above ↑</h7>
-                        </div>
-
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerRecipetime} required/>
                             <span></span>
@@ -517,17 +506,18 @@ function Create(props){
                             <label >Task 10: </label>
                         </div>
 
-                        <h8>This Recipe is:</h8>
-                        <br/>
-                        <br/>
+                        <div class="w3-center txt_field w3-margin-left w3-dropdown-hover">
 
-                        <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
-                        <label for="alergene1"> Vegetarian <FontAwesomeIcon icon={faSeedling}/></label>
+                            <h8>This recipe is</h8>
 
-                        <br/>
+                            <select class="drop w3-center" id="veg" name="veg" onChange={changeHandlerVeg} required>
+                            <option value="none">None</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Vegan">Vegan</option>
 
-                        <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
-                        <label for="alergene1"> Vegan <FontAwesomeIcon icon={faLeaf}/> <FontAwesomeIcon icon={faAppleAlt}/></label>
+                            </select>
+
+                        </div>
 
                         <br/>
                         <br/> 

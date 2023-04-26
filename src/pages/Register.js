@@ -14,7 +14,7 @@ function Register(props){
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState(""); 
     const [password, setPassword] = useState("");
-    const [admin, setAdmin] = useState("");
+    const [verification, setVerification] = useState("");
     const [country, setCountry] = useState("Spain");
     
     const [invalidTEXT, setInvalidTEXT] = useState(false);
@@ -32,7 +32,7 @@ function Register(props){
         setPassword(event.target.value);
     }
 
-    function changeHandlerAdmin(event){
+    function changeHandlerVerification(event){
         setAdmin(event.target.value);
     }
 
@@ -47,7 +47,7 @@ function Register(props){
             username: username,
             email: email,
             password: password,
-            admin: admin
+            admin: verification
         }
         axios.post('http://erasmus-recipes-backend.herokuapp.com/register', data)
         .then(response =>{
@@ -100,7 +100,7 @@ function Register(props){
                     </div>
 
                     <div class="txt_field">
-                        <input type="text" id="admin" name="admin" value={admin} onChange = {changeHandlerAdmin} required/>
+                        <input type="text" id="verification" name="verification" value={verification} onChange = {changeHandlerVerification} required/>
                         <span></span>
                         <label>Enter Verification Code</label>
                     </div>

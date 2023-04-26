@@ -51,7 +51,20 @@ function Create(props){
         "ingredient17": "",
         "ingredient18": "",
         "ingredient19": "",
-        "ingredient20": ""
+        "ingredient20": "",
+        "alergene1":"",
+        "alergene2":"",
+        "alergene3":"",
+        "alergene4":"",
+        "alergene5":"",
+        "alergene6":"",
+        "alergene7":"",
+        "alergene8":"",
+        "alergene9":"",
+        "alergene10":"",
+        "alergene11":"",
+        "alergene12":"",
+        "alergene13":"",
         });
 
     function changeHandlerName(event) { setRecipeContent( {...recipeContent, name:event.target.value}); }
@@ -89,6 +102,21 @@ function Create(props){
     function changeHandlerIngredient18(event) { setRecipeContent( {...recipeContent, ingredient18:event.target.value}); }
     function changeHandlerIngredient19(event) { setRecipeContent( {...recipeContent, ingredient19:event.target.value}); }
     function changeHandlerIngredient20(event) { setRecipeContent( {...recipeContent, ingredient20:event.target.value}); }
+    function changeHandlerAlergene1(event) { setRecipeContent( {...recipeContent, alergene1:event.target.value}); }
+    function changeHandlerAlergene2(event) { setRecipeContent( {...recipeContent, alergene2:event.target.value}); }
+    function changeHandlerAlergene3(event) { setRecipeContent( {...recipeContent, alergene3:event.target.value}); }
+    function changeHandlerAlergene4(event) { setRecipeContent( {...recipeContent, alergene4:event.target.value}); }
+    function changeHandlerAlergene5(event) { setRecipeContent( {...recipeContent, alergene5:event.target.value}); }
+    function changeHandlerAlergene6(event) { setRecipeContent( {...recipeContent, alergene6:event.target.value}); }
+    function changeHandlerAlergene7(event) { setRecipeContent( {...recipeContent, alergene7:event.target.value}); }
+    function changeHandlerAlergene8(event) { setRecipeContent( {...recipeContent, alergene8:event.target.value}); }
+    function changeHandlerAlergene9(event) { setRecipeContent( {...recipeContent, alergene9:event.target.value}); }
+    function changeHandlerAlergene10(event) { setRecipeContent( {...recipeContent, alergene10:event.target.value}); }
+    function changeHandlerAlergene11(event) { setRecipeContent( {...recipeContent, alergene11:event.target.value}); }
+    function changeHandlerAlergene12(event) { setRecipeContent( {...recipeContent, alergene12:event.target.value}); }
+    function changeHandlerAlergene13(event) { setRecipeContent( {...recipeContent, alergene13:event.target.value}); }
+
+
 
     function submit(event){
         event.preventDefault();
@@ -357,44 +385,44 @@ function Create(props){
 
                         <div class="w3-center"><h8>Containing Allergenes</h8><hr/></div>
 
-                            <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                            <input type="checkbox" id="alergene1" name="alergene1" value="Grain containing gluten" onChange={changeHandlerAlergene1} ></input>
                             <label for="alergene1"> Grain containing gluten</label>
                             <br/>
-                            <input type="checkbox" id="alergene2" name="alergene2" value="2"></input>
+                            <input type="checkbox" id="alergene2" name="alergene2" value="Crustaceans" onChange={changeHandlerAlergene2} ></input>
                             <label for="alergene2"> Crustaceans</label>
                             <br/>
-                            <input type="checkbox" id="alergene3" name="alergene3" value="3"></input>
+                            <input type="checkbox" id="alergene3" name="alergene3" value="Eggs" onChange={changeHandlerAlergene3} ></input>
                             <label for="alergene3"> Eggs</label>
                             <br/>
-                            <input type="checkbox" id="alergene4" name="alergene4" value="4"></input>
+                            <input type="checkbox" id="alergene4" name="alergene4" value="Fish" onChange={changeHandlerAlergene4} ></input>
                             <label for="alergene4"> Fish</label>
                             <br/>
-                            <input type="checkbox" id="alergene5" name="alergene5" value="5"></input>
+                            <input type="checkbox" id="alergene5" name="alergene5" value="Peanuts" onChange={changeHandlerAlergene5}></input>
                             <label for="alergene5"> Peanuts</label>
                             <br/>
-                            <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
+                            <input type="checkbox" id="alergene6" name="alergene6" value="Soy" onChange={changeHandlerAlergene6} ></input>
                             <label for="alergene6"> Soy</label>
                             <br/>
-                            <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
-                            <label for="alergene6"> Milk</label>
-                            <br/>
-                            <input type="checkbox" id="alergene7" name="alergene7" value="7"></input>
+                            <input type="checkbox" id="alergene7" name="alergene7" value="Shell fruits" onChange={changeHandlerAlergene7} ></input>
                             <label for="alergene7"> Shell fruits</label>
                             <br/>
-                            <input type="checkbox" id="alergene8" name="alergene8" value="8"></input>
+                            <input type="checkbox" id="alergene8" name="alergene8" value="Celery" onChange={changeHandlerAlergene8} ></input>
                             <label for="alergene8"> Celery</label>
                             <br/>
-                            <input type="checkbox" id="alergene9" name="alergene9" value="9"></input>
+                            <input type="checkbox" id="alergene9" name="alergene9" value="Mustard" onChange={changeHandlerAlergene9} ></input>
                             <label for="alergene9"> Mustard</label>
                             <br/>
-                            <input type="checkbox" id="alergene10" name="alergene10" value="10"></input>
+                            <input type="checkbox" id="alergene10" name="alergene10" value="Sesame seeds" onChange={changeHandlerAlergene10} ></input>
                             <label for="alergene10"> Sesame seeds</label>
                             <br/>
-                            <input type="checkbox" id="alergene11" name="alergene11" value="11"></input>
+                            <input type="checkbox" id="alergene11" name="alergene11" value="Lupine" onChange={changeHandlerAlergene11} ></input>
                             <label for="alergene11"> Lupine</label>
                             <br/>
-                            <input type="checkbox" id="alergene12" name="alergene12" value="12"></input>
+                            <input type="checkbox" id="alergene12" name="alergene12" value="Molluscs" onChange={changeHandlerAlergene12} ></input>
                             <label for="alergene12"> Molluscs</label>
+                            <br/>
+                            <input type="checkbox" id="alergene13" name="alergene13" value="Milk" onChange={changeHandlerAlergene13} ></input>
+                            <label for="alergene13"> Milk</label>
 
                         </div>
 
@@ -526,47 +554,47 @@ function Create(props){
                         <br/>
                         <br/>
 
-                        <input type="checkbox" id="alergene1" name="alergene1" value="1"></input>
+                        <input type="checkbox" id="alergene1" name="alergene1" value="Grain containing gluten" onChange={changeHandlerAlergene1}></input>
                         <label for="alergene1"> Grain containing gluten, </label>
 
-                        <input type="checkbox" id="alergene2" name="alergene2" value="2"></input>
+                        <input type="checkbox" id="alergene2" name="alergene2" value="Crustaceans" onChange={changeHandlerAlergene2} ></input>
                         <label for="alergene2"> Crustaceans, </label>
 
-                        <input type="checkbox" id="alergene3" name="alergene3" value="3"></input>
+                        <input type="checkbox" id="alergene3" name="alergene3" value="Eggs" onChange={changeHandlerAlergene3} ></input>
                         <label for="alergene3"> Eggs, </label>
 
-                        <input type="checkbox" id="alergene4" name="alergene4" value="4"></input>
+                        <input type="checkbox" id="alergene4" name="alergene4" value="Fish" onChange={changeHandlerAlergene4} ></input>
                         <label for="alergene4"> Fish, </label>
 
-                        <input type="checkbox" id="alergene5" name="alergene5" value="5"></input>
+                        <input type="checkbox" id="alergene5" name="alergene5" value="Peanuts" onChange={changeHandlerAlergene5} ></input>
                         <label for="alergene5"> Peanuts, </label>
 
-                        <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
+                        <input type="checkbox" id="alergene6" name="alergene6" value="Soy" onChange={changeHandlerAlergene6} ></input>
                         <label for="alergene6"> Soy </label>
 
                         <br/>
                         <br/>
 
-                        <input type="checkbox" id="alergene6" name="alergene6" value="6"></input>
-                        <label for="alergene6"> Milk, </label>
-
-                        <input type="checkbox" id="alergene7" name="alergene7" value="7"></input>
+                        <input type="checkbox" id="alergene7" name="alergene7" value="Shell fruits" onChange={changeHandlerAlergene7} ></input>
                         <label for="alergene7"> Shell fruits, </label>
 
-                        <input type="checkbox" id="alergene8" name="alergene8" value="8"></input>
+                        <input type="checkbox" id="alergene8" name="alergene8" value="Celery" onChange={changeHandlerAlergene8} ></input>
                         <label for="alergene8"> Celery, </label>
 
-                        <input type="checkbox" id="alergene9" name="alergene9" value="9"></input>
+                        <input type="checkbox" id="alergene9" name="alergene9" value="Mustard" onChange={changeHandlerAlergene9} ></input>
                         <label for="alergene9"> Mustard, </label>
 
-                        <input type="checkbox" id="alergene10" name="alergene10" value="10"></input>
+                        <input type="checkbox" id="alergene10" name="alergene10" value="Sesame seeds" onChange={changeHandlerAlergene10} ></input>
                         <label for="alergene10"> Sesame seeds, </label>
 
-                        <input type="checkbox" id="alergene11" name="alergene11" value="11"></input>
+                        <input type="checkbox" id="alergene11" name="alergene11" value="Lupine" onChange={changeHandlerAlergene11} ></input>
                         <label for="alergene11"> Lupine, </label>
                         
-                        <input type="checkbox" id="alergene12" name="alergene12" value="12"></input>
+                        <input type="checkbox" id="alergene12" name="alergene12" value="Molluscs" onChange={changeHandlerAlergene12} ></input>
                         <label for="alergene12"> Molluscs </label>
+
+                        <input type="checkbox" id="alergene13" name="alergene13" value="Milk" onChange={changeHandlerAlergene13} ></input>
+                        <label for="alergene13"> Milk, </label>
 
                         <div class="w3-margin-bottom">
                             <br></br>

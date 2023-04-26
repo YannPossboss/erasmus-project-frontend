@@ -47,7 +47,7 @@ function Register(props){
             username: username,
             email: email,
             password: password,
-            admin: verification
+            verification: verification
         }
         axios.post('http://erasmus-recipes-backend.herokuapp.com/register', data)
         .then(response =>{

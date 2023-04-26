@@ -33,7 +33,7 @@ function Register(props){
     }
 
     function changeHandlerVerification(event){
-        setAdmin(event.target.value);
+        setVerification(event.target.value);
     }
 
     function changeHandlerCountry(event){

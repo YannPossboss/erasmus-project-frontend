@@ -6,9 +6,6 @@ import { useCookies } from "react-cookie";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHourglass } from '@fortawesome/free-solid-svg-icons'
-import { faSeedling } from '@fortawesome/free-solid-svg-icons'
-import { faLeaf } from '@fortawesome/free-solid-svg-icons'
-import { faAppleAlt } from '@fortawesome/free-solid-svg-icons'
 
 import Footer from "./pageComponent/Footer"; 
 import ButtonLogout from "./pageComponent/ButtonLogout";
@@ -447,8 +444,6 @@ function Create(props){
 
             </div>
 
-            <br/><br/><br/>
-
             <div class="centerupload w3-hide-small w3-hide-medium">
 
                 <form onSubmit={submit} >
@@ -460,6 +455,8 @@ function Create(props){
                             <span></span>
                             <label >Recipe Name *</label>
                         </div>
+
+                        <br/>
 
                         <div class="txt_field">
                             <input type="text" id="imagelink" name="imagelink" value={recipeContent.imagelink} onChange={changeHandlerImageLink}/>
@@ -553,7 +550,7 @@ function Create(props){
 
                         <div class="w3-center txt_field w3-margin-left w3-dropdown-hover">
 
-                            <h8>This recipe is</h8>
+                            <h8>This recipe is    </h8>
 
                             <select class="drop w3-center" id="veg" name="veg" onChange={changeHandlerVeg} required>
                             <option value="none">None</option>

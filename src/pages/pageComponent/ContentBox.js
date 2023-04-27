@@ -51,7 +51,7 @@ function ContentBox(props){
                     <h3>{props.recipeContent.veg}</h3>
                     
                     <br/>
-                    <h3>Region: &nbsp; &nbsp;<a>{props.recipeContent.country}</a></h3>
+                    <h3>Region: &nbsp; &nbsp;{props.recipeContent.country}</h3>
                     <br/>
                     <h3>Time:   &nbsp; &nbsp; &nbsp; {props.recipeContent.recipetime} <FontAwesomeIcon icon={faHourglass}/> <FontAwesomeIcon icon={faUtensils}/></h3>
                     <br/>

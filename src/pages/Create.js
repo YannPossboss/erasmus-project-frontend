@@ -570,7 +570,7 @@ function Create(props){
                         <label for="alergene5"> Peanuts, </label>
 
                         <input type="checkbox" id="alergene6" name="alergene6" value="Soy" onChange={changeHandlerAlergene6} ></input>
-                        <label for="alergene6"> Soy </label>
+                        <label for="alergene6"> Soy, </label>
 
                         <br/>
                         <br/>
@@ -591,10 +591,10 @@ function Create(props){
                         <label for="alergene11"> Lupine, </label>
                         
                         <input type="checkbox" id="alergene12" name="alergene12" value="Molluscs" onChange={changeHandlerAlergene12} ></input>
-                        <label for="alergene12"> Molluscs </label>
+                        <label for="alergene12"> Molluscs, </label>
 
                         <input type="checkbox" id="alergene13" name="alergene13" value="Milk" onChange={changeHandlerAlergene13} ></input>
-                        <label for="alergene13"> Milk, </label>
+                        <label for="alergene13"> Milk </label>
 
                         <div class="w3-margin-bottom">
                             <br></br>

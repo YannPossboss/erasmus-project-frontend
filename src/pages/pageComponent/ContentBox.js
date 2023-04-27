@@ -55,7 +55,7 @@ function ContentBox(props){
                     <br/>
                     <h3>Time:   &nbsp; &nbsp; &nbsp; {props.recipeContent.recipetime} <FontAwesomeIcon icon={faHourglass}/> <FontAwesomeIcon icon={faUtensils}/></h3>
                     <br/>
-                    <h3>Uploaded by: {props.recipeContent.username}</h3>
+                    <h3>Uploaded by: &nbsp; {props.recipeContent.username}</h3>
                 </div>
 
                 <img src={food} alt="RecipePicture_NotAvailable"/>

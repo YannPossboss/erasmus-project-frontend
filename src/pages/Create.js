@@ -21,7 +21,7 @@ function Create(props){
     const [cookies, removeCookie] = useCookies(['name']);
     
     const [recipeContent, setRecipeContent] = useState({
-        "name":"", "country":"Spain","veg":"none", "recipetime": "", "describtion":"", 
+        "name":"", "country":"Spain","veg":"none", "imagelink":"", "recipetime": "", "describtion":"", 
         "task1":"",
         "task2": "",
         "task3": "",
@@ -115,6 +115,7 @@ function Create(props){
     function changeHandlerAlergene11(event) { setRecipeContent( {...recipeContent, alergene11:event.target.value}); }
     function changeHandlerAlergene12(event) { setRecipeContent( {...recipeContent, alergene12:event.target.value}); }
     function changeHandlerAlergene13(event) { setRecipeContent( {...recipeContent, alergene13:event.target.value}); }
+    function changeHandlerImageLink(event) { setRecipeContent( {...recipeContent, imagelink:event.target.value}); }
 
 
 
@@ -148,15 +149,23 @@ function Create(props){
                      <ButtonProfile w3classprops={"w3-center w3-hide-large w3-margin-top"} typeCustom={"reset"} ></ButtonProfile>
             </div>
 
+            <br/><br/><br/>
+
             <div class="centerupdate w3-hide-large w3-hide-medium">
                 <h1>Create new Recipe</h1>
 
                 <form onSubmit={submit} >
                     <div class="txt_field">
-                            <input type="text" id="" name="" onChange={changeHandlerName} required/>
-                            <span></span>
-                            <label >Recipe Name *</label>
-                        </div>
+                        <input type="text" id="" name="" onChange={changeHandlerName} required/>
+                        <span></span>
+                        <label >Recipe Name *</label>
+                    </div>
+
+                    <div class="txt_field">
+                        <input type="text" id="imagelink" name="imagelink" value={imagelink} onChange={changeHandlerImageLink}/>
+                        <span></span>
+                        <label >URL of picture</label>
+                    </div>
 
                         <div class="w3-center w3-dropdown-hover">
 
@@ -438,6 +447,8 @@ function Create(props){
 
             </div>
 
+            <br/><br/><br/>
+
             <div class="centerupload w3-hide-small w3-hide-medium">
 
                 <form onSubmit={submit} >
@@ -448,6 +459,12 @@ function Create(props){
                             <input type="text" id="" name="" onChange={changeHandlerName} required/>
                             <span></span>
                             <label >Recipe Name *</label>
+                        </div>
+
+                        <div class="txt_field">
+                            <input type="text" id="imagelink" name="imagelink" value={imagelink} onChange={changeHandlerImageLink}/>
+                            <span></span>
+                            <label >URL of picture</label>
                         </div>
 
                         <div class="w3-center w3-dropdown-hover">

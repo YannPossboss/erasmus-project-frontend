@@ -29,6 +29,9 @@ function ContentBox(props){
         if(props.recipeContent.veg === "none"){
             props.recipeContent.veg = "";
         }
+        if(props.recipeContent.imagelink === ""){
+            props.recipeContent.imagelink = "Link is not available";
+        }
 
 
     return(
@@ -52,9 +55,15 @@ function ContentBox(props){
                     <br/>
                     <h3>Time:   &nbsp; &nbsp; &nbsp; {props.recipeContent.recipetime} <FontAwesomeIcon icon={faHourglass}/> <FontAwesomeIcon icon={faUtensils}/></h3>
                     <br/>
+                    <h3>Uploaded by: {props.recipeContent.username}</h3>
                 </div>
 
                 <img src={food} alt="RecipePicture_NotAvailable"/>
+
+                <div class="contentboxtextl">
+                    <h4>Look up recipe pictures at:</h4>
+                    <h4>{props.recipeContent.imagelink}</h4>
+                </div>
 
                 <div class="contentboxtextl">
 

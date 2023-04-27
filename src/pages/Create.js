@@ -162,7 +162,7 @@ function Create(props){
                     </div>
 
                     <div class="txt_field">
-                        <input type="text" id="imagelink" name="imagelink" value={imagelink} onChange={changeHandlerImageLink}/>
+                        <input type="text" id="imagelink" name="imagelink" value={recipeContent.imagelink} onChange={changeHandlerImageLink}/>
                         <span></span>
                         <label >URL of picture</label>
                     </div>
@@ -462,7 +462,7 @@ function Create(props){
                         </div>
 
                         <div class="txt_field">
-                            <input type="text" id="imagelink" name="imagelink" value={imagelink} onChange={changeHandlerImageLink}/>
+                            <input type="text" id="imagelink" name="imagelink" value={recipeContent.imagelink} onChange={changeHandlerImageLink}/>
                             <span></span>
                             <label >URL of picture</label>
                         </div>

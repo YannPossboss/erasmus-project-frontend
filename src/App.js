@@ -16,6 +16,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 import './App.css';
 import './w3.css';
+import AdminPost from "./pages/AdminPost";
 
 function App() {
   
@@ -34,6 +35,7 @@ function App() {
           <Route path = "/editp" element={<ProfileEdit/>}/>
           <Route path = "/create" element={<Create/>}/>
           <Route path = "/recipe" element={<RecipeTempl/>}/>
+          <Route path = "/admincreatecode" element={<AdminPost/>}/>
         </Routes>
       </Router>
     </div>

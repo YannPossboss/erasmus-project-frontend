@@ -26,6 +26,11 @@ function ContentBox(props){
         if(props.recipeContent.country === "Poland") { flag = flagP; }
         if(props.recipeContent.country === "Romania") { flag = flagR; }
 
+        //None in Veg soll erst garnicht angezeigt werden.
+        if(props.recipeContent.veg === "none"){
+            props.recipeContent.veg = "";
+        }
+
 
     return(
 
@@ -41,10 +46,10 @@ function ContentBox(props){
 
                     <br/>
                     <br/>
-                    <h3>Vegetarian <FontAwesomeIcon icon={faSeedling}/></h3>
+                    <h3>{props.recipeContent.veg}</h3>
                     
                     <br/>
-                    <h3>Region: &nbsp; &nbsp;<a href="https://shorturl.at/inrZ0">{props.recipeContent.country}</a></h3>
+                    <h3>Region: &nbsp; &nbsp;<a>{props.recipeContent.country}</a></h3>
                     <br/>
                     <h3>Time:   &nbsp; &nbsp; &nbsp; {props.recipeContent.recipetime} <FontAwesomeIcon icon={faHourglass}/> <FontAwesomeIcon icon={faUtensils}/></h3>
                     <br/>
@@ -103,9 +108,19 @@ function ContentBox(props){
                     <hr></hr>
                     <h4>This Recipe contains:</h4>
                     <hr></hr>
-                    <h4>- Eggs</h4>
-                    <h4>- Soy</h4>
-                    <h4>- Sesame seeds</h4>
+                    <h4>{props.recipeContent.alergene1}</h4>
+                    <h4>{props.recipeContent.alergene2}</h4>
+                    <h4>{props.recipeContent.alergene3}</h4>
+                    <h4>{props.recipeContent.alergene4}</h4>
+                    <h4>{props.recipeContent.alergene5}</h4>
+                    <h4>{props.recipeContent.alergene6}</h4>
+                    <h4>{props.recipeContent.alergene7}</h4>
+                    <h4>{props.recipeContent.alergene8}</h4>
+                    <h4>{props.recipeContent.alergene9}</h4>
+                    <h4>{props.recipeContent.alergene10}</h4>
+                    <h4>{props.recipeContent.alergene11}</h4>
+                    <h4>{props.recipeContent.alergene12}</h4>
+                    <h4>{props.recipeContent.alergene13}</h4>
                 </div>
 
             </div>

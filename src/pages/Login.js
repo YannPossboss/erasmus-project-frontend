@@ -100,9 +100,9 @@ function Login(props){
 
                     <div class="style2">
                         <input type="submit" value="Login"></input>
-                        <Link to="/frgtpass"><input type="submit" value="Forgot Password ?"></input></Link>
+                        <Link to="/frgtpass"><input type="submit" value="Forgot password ?"></input></Link>
                         <Link to="/register"><input type="submit" value="+ Sign up"></input></Link>
-                        <Link to="/navigation"><input type="submit" value="Continue without Login"></input></Link>
+                        <Link to="/navigation"><input type="submit" value="Continue without login"></input></Link>
                     </div>
 
                 </form>

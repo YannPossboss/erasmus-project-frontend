@@ -29,7 +29,7 @@ function RecipeTempl(props){
     const [updatedSearchText, setUpdatedSearchText] = useState("");
     const [SearchTextUpdate, setSearchTextUpdate] = useState("");
 
-    if(recipeShowNumberUpdate != recipeShowNumber || SearchTextUpdate != updatedSearchText){
+    if(recipeShowNumberUpdate !== recipeShowNumber || SearchTextUpdate !== updatedSearchText){
         setRecipeShowNumberUpdate(recipeShowNumber);
         setSearchTextUpdate(updatedSearchText);
         axios.post('http://erasmus-recipes-backend.herokuapp.com/recipe', {recipeId: recipeShowNumber, search: updatedSearchText})
@@ -125,7 +125,7 @@ function RecipeTempl(props){
                                     <div>
                                         <input type="reset" class="w3-center w3-hide-large w3-right w3-margin-right w3-margin-bottom"value="Next"  onClick={onClickHandlerRight}></input>
                                         <input type="reset" class="w3-center w3-hide-large w3-left w3-margin-left" value="Back" onClick={onClickHandlerLeft}></input>
-                                        <Search w3classprops={"w3-right"}></Search>
+                                        <Search w3classprops={"w3-right"} searchButton={searchButton} searchOnChange={searchOnChange} searchText={searchText}></Search>
                                     </div>
 
                                     

@@ -12,7 +12,8 @@ function AdminPost(props){
     const [cookies] = useCookies(['name']);
 
     function submitHandler(event){
-        axios.post('http://erasmus-recipes-backend.herokuapp.com/secured/admincreatecode', {"vercode": vercode, token: cookies.token})
+        event.preventDefault()
+        axios.post('http://erasmus-recipes-backend.herokuapp.com/secured/admincreatecode', {vercode: vercode, token: cookies.token})
         .then(response =>{
             console.log(response)
             setVercode("");

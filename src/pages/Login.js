@@ -89,13 +89,13 @@ function Login(props){
                     <div class="txt_field">
                         <input type="text" id="email" name="email" value={email} onChange = {changeHandlerEmail} required/>
                         <span></span>
-                        <label>Enter Email or Username</label>
+                        <label>Enter e-mail or username</label>
                     </div>
 
                     <div class="txt_field">
                         <input type="password" id="password" name="password" value={password} onChange = {changeHandlerPassword} required/>
                         <span></span>
-                        <label>Enter Password</label>
+                        <label>Enter password</label>
                     </div>
 
                     <div class="style2">

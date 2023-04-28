@@ -114,7 +114,7 @@ function ContentBox(props){
                 <div class="contentboxtextl">
                     <h2><FontAwesomeIcon icon={faAllergies}/> Allergenes</h2>
                     <hr></hr>
-                    <h4>This Recipe contains:</h4>
+                    <h4>This recipe contains:</h4>
                     <hr></hr>
                     <h4>{props.recipeContent.alergene1}</h4>
                     <h4>{props.recipeContent.alergene2}</h4>

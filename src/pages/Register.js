@@ -70,13 +70,13 @@ function Register(props){
                 <div class=" w3-center w3-hide-large w3-hide-medium w3-margin-top">
                     <h1>Registration</h1>
 
-                    <Invalidtxt text={"This Email or Username is allready in use or check your verificationcode"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                    <Invalidtxt text={"This e-mail or username is allready in use or check your verificationcode"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <div class="w3-hide-small">
                     <h1>Registration</h1>
 
-                    <Invalidtxt text={"This Email or Username is allready in use or check your verificationcode"} invalidTEXT={invalidTEXT}></Invalidtxt>
+                    <Invalidtxt text={"This e-mail or username is allready in use or check your verificationcode"} invalidTEXT={invalidTEXT}></Invalidtxt>
                 </div>
 
                 <form onSubmit={submitHandler}>
@@ -84,25 +84,25 @@ function Register(props){
                     <div class="txt_field">
                         <input type="text" id="username" name="username" value={username} onChange = {changeHandlerUsername} required/>
                         <span></span>
-                        <label>Set Username</label>
+                        <label>Set username</label>
                     </div>
 
                     <div class="txt_field">
                         <input type="text" id="email" name="email" value={email} onChange = {changeHandlerEmail} required/>
                         <span></span>
-                        <label>Set Email</label>
+                        <label>Set e-mail</label>
                     </div>
 
                     <div class="txt_field">
                         <input type="password" id="password" name="password" value={password} onChange = {changeHandlerPassword} required/>
                         <span></span>
-                        <label>Set Password</label>
+                        <label>Set password</label>
                     </div>
 
                     <div class="txt_field">
                         <input type="text" id="verification" name="verification" value={verification} onChange = {changeHandlerVerification} required/>
                         <span></span>
-                        <label>Enter Verification Code</label>
+                        <label>Enter verification code</label>
                     </div>
 
                     <div class="w3-center w3-dropdown-hover">
@@ -120,7 +120,7 @@ function Register(props){
                     </div>
 
                     <div class="style2">
-                        <input type="submit" value="Register Account"/>
+                        <input type="submit" value="Register account"/>
                         <Link to="/login"><input type="submit" value="Cancel"/></Link>
                     </div>
 

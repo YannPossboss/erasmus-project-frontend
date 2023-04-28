@@ -42,22 +42,22 @@ function Landing(props){
                             <br/>
                             <br/>
 
-                            <h3 class="landing3 w3-margin-left">Hello and welcome on our Erasmus+ Project Website !</h3>
+                            <h3 class="landing3 w3-margin-left">Hello and welcome on our Erasmus+ project website !</h3>
                             <h5 class="landing4 w3-margin-left">On this website you can find instructions and recipes for all kinds of delicious dishes from all over the world. </h5>
 
 
                             <div class="style2">
-                                <Link to="/login"><input type="submit" value="Login to your Account"></input></Link>
+                                <Link to="/login"><input type="submit" value="Login to your account"></input></Link>
                             </div>
 
 
                             <div class="style2">
-                                <Link to="/register"><input type="submit" value="Register new Account"/></Link>
+                                <Link to="/register"><input type="submit" value="Register new account"/></Link>
                             </div>
 
 
                             <div class="style2">
-                                <Link to="/navigation"><input type="submit" value="Continue without Login"/></Link>   
+                                <Link to="/navigation"><input type="submit" value="Continue without login"/></Link>   
                             </div>
                     </div>
 
@@ -69,7 +69,7 @@ function Landing(props){
                             <img src={erasmus} alt="Avatar" class="w3-center"/>
                         </div>
 
-                        <h1 class="landing w3-margin-left"><h1>Hello and welcome on our Erasmus+ Project Website !</h1></h1>
+                        <h1 class="landing w3-margin-left"><h1>Hello and welcome on our Erasmus+ project website !</h1></h1>
                         <h3 class="landing w3-margin-left"><h3>On this website you can find instructions and recipes for all kinds of delicious dishes from all over the world.</h3></h3>
                         
                         <br/>
@@ -77,16 +77,16 @@ function Landing(props){
                         <br/>
 
                         <div class="style2">
-                            <Link to="/login"><input type="submit" value="Login to your Account"></input></Link>
+                            <Link to="/login"><input type="submit" value="Login to your account"></input></Link>
                         </div>
 
                         <div class="style2">
-                            <Link to="/register"><input type="submit" value="Register new Account"/></Link>  
+                            <Link to="/register"><input type="submit" value="Register new account"/></Link>  
                         </div>
 
 
                         <div class="style2">
-                            <Link to="/navigation"><input type="submit" value="Continue without Login"/></Link>   
+                            <Link to="/navigation"><input type="submit" value="Continue without login"/></Link>   
                         </div> 
                     </div>
                 </div>

@@ -45,24 +45,24 @@ class FrgtPass extends React.Component {
 
                 <div class="center">
 
-                    <h1>Forgot Password </h1>
+                    <h1>Forgot password </h1>
 
                     <form onSubmit={this.submitHandler}>
 
                     <div class="txt_field">
                         <input type="text" id="user" name="user" value={user} onChange = {this.changeHandler} required/>
                         <span></span>
-                        <label>Enter Username</label>
+                        <label>Enter username</label>
                     </div>
 
                     <div class="txt_field">
                         <input type="text" id="email" name="email" value={email} onChange = {this.changeHandler} required/>
                         <span></span>
-                        <label>Enter Email</label>
+                        <label>Enter e-mail</label>
                     </div>
 
                         <div class="style2">
-                            <input type="submit" value="Send new Password"/>
+                            <input type="submit" value="Send new password"/>
                             <Link to="/login"><input type="submit" value="Cancel"/></Link>
                         </div>
 

@@ -149,13 +149,13 @@ function Create(props){
             <br/><br/><br/>
 
             <div class="centerupdate w3-hide-large w3-hide-medium">
-                <h1>Create new Recipe</h1>
+                <h1>Create new recipe</h1>
 
                 <form onSubmit={submit} >
                     <div class="txt_field">
                         <input type="text" id="" name="" onChange={changeHandlerName} required/>
                         <span></span>
-                        <label >Recipe Name *</label>
+                        <label >Recipe name *</label>
                     </div>
 
                     <div class="txt_field">
@@ -166,7 +166,7 @@ function Create(props){
 
                         <div class="w3-center w3-dropdown-hover">
 
-                                <h8>Where does the Recipe come from?  </h8>
+                                <h8>Where does the recipe come from?  </h8>
 
                                 <select class="drop w3-center" id="country" name="country" onChange={changeHandlerCountry} required>
                                 <option value="Spain">Spain</option>
@@ -181,10 +181,10 @@ function Create(props){
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerRecipetime} required/>
                             <span></span>
-                            <label>Preparation Time <FontAwesomeIcon icon={faHourglass}/> </label>
+                            <label>Preparation time <FontAwesomeIcon icon={faHourglass}/> </label>
                         </div>
 
-                        <textarea placeholder="A brief description of the Recipe:" onChange={changeHandlerDescribtion} required></textarea>
+                        <textarea placeholder="A brief description of the recipe:" onChange={changeHandlerDescribtion} required></textarea>
 
                         <h1>Tasklist: </h1>
 
@@ -218,7 +218,7 @@ function Create(props){
                             <label >Task 5: </label>
                         </div>
 
-                        <h4>Not Required: </h4>
+                        <h4>Not required: </h4>
 
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerTask6} />
@@ -250,7 +250,7 @@ function Create(props){
                             <label >Task 10: </label>
                         </div>
 
-                        <h1>Ingredient List: </h1>
+                        <h1>Ingredient list: </h1>
 
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerIngredient1} required/>
@@ -389,7 +389,7 @@ function Create(props){
 
                         <div class="checkboxall">
 
-                        <div class="w3-center"><h8>Containing Allergenes</h8><hr/></div>
+                        <div class="w3-center"><h8>Containing allergenes</h8><hr/></div>
 
                             <input type="checkbox" id="alergene1" name="alergene1" value="Grain containing gluten" onChange={changeHandlerAlergene1} ></input>
                             <label for="alergene1"> Grain containing gluten</label>
@@ -453,7 +453,7 @@ function Create(props){
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerName} required/>
                             <span></span>
-                            <label >Recipe Name *</label>
+                            <label >Recipe name *</label>
                         </div>
 
                         <br/>
@@ -466,7 +466,7 @@ function Create(props){
 
                         <div class="w3-center w3-dropdown-hover">
 
-                                <h8>Where does the Recipe come from?  </h8>
+                                <h8>Where does the recipe come from?  </h8>
 
                                 <select class="drop w3-center" id="country" name="country" onChange={changeHandlerCountry} required>
                                 <option value="Spain">Spain</option>
@@ -481,10 +481,10 @@ function Create(props){
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerRecipetime} required/>
                             <span></span>
-                            <label>Preparation Time <FontAwesomeIcon icon={faHourglass}/></label>
+                            <label>Preparation time <FontAwesomeIcon icon={faHourglass}/></label>
                         </div>
 
-                        <textarea placeholder="A brief description of the Recipe:" onChange={changeHandlerDescribtion} required></textarea>
+                        <textarea placeholder="A brief description of the recipe:" onChange={changeHandlerDescribtion} required></textarea>
 
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerTask1} required/>
@@ -516,7 +516,7 @@ function Create(props){
                             <label >Task 5: </label>
                         </div>
 
-                        <h4>Not Required: </h4>
+                        <h4>Not required: </h4>
 
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerTask6} />
@@ -564,7 +564,7 @@ function Create(props){
                         <br/>
                         <br/> 
 
-                        <h8>Containing Allergenes:</h8>
+                        <h8>Containing allergenes:</h8>
                         <br/>
                         <br/>
 
@@ -665,7 +665,7 @@ function Create(props){
                             <label >Ingredient 5: </label>
                         </div>
 
-                        <h4>Not Required: </h4>
+                        <h4>Not required: </h4>
 
                         <div class="txt_field">
                             <input type="text" id="" name="" onChange={changeHandlerIngredient6} />

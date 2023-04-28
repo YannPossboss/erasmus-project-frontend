@@ -62,7 +62,7 @@ function ContentBox(props){
 
                 <div class="contentboxtextl">
                     <h4>Look up recipe pictures at:</h4>
-                    <h4>{props.recipeContent.imagelink}</h4>
+                    <h4><a href={props.recipeContent.imagelink}>{props.recipeContent.imagelink}</a></h4>
                 </div>
 
                 <div class="contentboxtextl">

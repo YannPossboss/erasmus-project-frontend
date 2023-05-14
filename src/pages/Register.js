@@ -111,7 +111,7 @@ function Register(props){
 
                                 <select class="drop w3-center" id="country" name="country" onChange={changeHandlerCountry}>
                                 <option value="Spain">Spain</option>
-                                <option value="Turkey">Turkey</option>
+                                <option value="Turkey">Türkiye</option>
                                 <option value="Romania">Romania</option>
                                 <option value="Poland">Poland</option>
                                 <option value="Germany">Germany</option>

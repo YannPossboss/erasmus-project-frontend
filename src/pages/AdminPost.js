@@ -31,7 +31,7 @@ function AdminPost(props){
 
     return(
         <div>
-            <h1 class="w3-center w3-black">This page is only for authorised stuff members from HEMS</h1>
+            <h1 class="w3-center w3-black">This page is only for authorised staff members from HEMS</h1>
 
             <form onSubmit={submitHandler}>
 

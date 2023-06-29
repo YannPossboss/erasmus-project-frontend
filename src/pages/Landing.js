@@ -17,7 +17,7 @@ function Landing(props){
     const [cookies] = useCookies(['name']);
 
     //Wenn du eingeloggt bist, wirst du direkt zur Navigation page weitergeleitet
-    axios.post("http://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
+    axios.post("https://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
     .then(response =>{
         console.log(response)
         //Das passiert hier

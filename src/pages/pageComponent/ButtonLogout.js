@@ -10,7 +10,7 @@ function ButtonLogout(props){
     
     const [cookies] = useCookies(['name']);
 
-    axios.post("http://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
+    axios.post("https://erasmus-recipes-backend.herokuapp.com/secured/user", {token: cookies.token})
     .then(response =>{
         setText("Logout");
     })

@@ -13,7 +13,7 @@ function AdminPost(props){
 
     function submitHandler(event){
         event.preventDefault()
-        axios.post('http://erasmus-recipes-backend.herokuapp.com/secured/admincreatecode', {vercode: vercode, token: cookies.token})
+        axios.post('https://erasmus-recipes-backend.herokuapp.com/secured/admincreatecode', {vercode: vercode, token: cookies.token})
         .then(response =>{
             console.log(response)
             setVercode("");

@@ -713,7 +713,7 @@ html{
       transition: .5s;
     }
 
-    input[type="submitNavi"]{
+    .navi input[type="submit"]{
       width: 70%;
       height: 50px;
       border: 1px solid;
@@ -730,7 +730,7 @@ html{
       text-align: center;
       border-color: #cacaca;
     }
-    input[type="submitNavi"]:hover{
+    .navi input[type="submit"]:hover{
       border-color: white;
       box-shadow: 6px 9px 8px 8px #ffffff42;
       transition: .5s;
@@ -1142,6 +1142,7 @@ html{
     margin-left: 5px;
     margin-right: 5px;
     color: white;
+    word-wrap: break-word;
   }
 
   .contentboxtextl h3 {
@@ -1235,6 +1236,8 @@ html{
 
     .contentboxtextl h4 {
       font-size: 15px;
+      white-space: normal;
+      word-wrap: break-word;
     }
 
     .recipeHeader img {

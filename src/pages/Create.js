@@ -170,7 +170,7 @@ function Create(props){
 
                                 <select class="drop w3-center" id="country" name="country" onChange={changeHandlerCountry} required>
                                 <option value="Spain">Spain</option>
-                                <option value="Turkey">Türkiye</option>
+                                <option value="Türkiye">Türkiye</option>
                                 <option value="Romania">Romania</option>
                                 <option value="Poland">Poland</option>
                                 <option value="Germany">Germany</option>

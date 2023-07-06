@@ -20,7 +20,7 @@ function ContentBox(props){
     let flag;
     if(props.recipeContent.test){   
         if(props.recipeContent.country === "Spain") { flag = flagS; }
-        if(props.recipeContent.country === "Turkey") { flag = flagT; }
+        if(props.recipeContent.country === "Türkiye") { flag = flagT; }
         if(props.recipeContent.country === "Germany") { flag = flagG; }
         if(props.recipeContent.country === "Poland") { flag = flagP; }
         if(props.recipeContent.country === "Romania") { flag = flagR; }

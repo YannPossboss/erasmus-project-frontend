@@ -55,12 +55,14 @@ function Navigation(props){
 
                 <div class="landingnew w3-hide-small">
                     <Link to="/login" onClick={LoginTest}><input type="submit" value="Create new recipe +"/></Link>
-                    <Link to="/recipe"><input type="submit" value="Show me some recipes !"/></Link>
+                    <Link to="/recipe"><input type="submit" value="Show me some recipes"/></Link>
+                    <a href="https://maps.app.goo.gl/uGqWpfrDgcQvPcH77"><input type="submit" value="Show me some local food producers"/></a>
                 </div>
 
                 <div class="w3-hide-middle w3-hide-large navi">
                     <Link to="/login" onClick={LoginTest}><input type="submit" value="Create new recipe +"/></Link>
-                    <Link to="/recipe"><input type="submit" value="Show me some recipes !"/></Link>
+                    <Link to="/recipe"><input type="submit" value="Show me some recipes"/></Link>
+                    <a href="https://maps.app.goo.gl/uGqWpfrDgcQvPcH77"><input type="submit" value="Show me local producers"/></a>
                 </div>
                 <Footer></Footer>
             </div>
